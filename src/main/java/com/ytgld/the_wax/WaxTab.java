@@ -17,6 +17,7 @@ public class WaxTab {
                 entries.accept(ItemInit.GOLDEN_WAX);
                 entries.accept(BlockInit.WAX_PINE);
                 entries.accept(BlockInit.WAX_BASE);
+                entries.accept(BlockInit.WAX_SUGAR);
             })
             .build();
 }

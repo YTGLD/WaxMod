@@ -30,6 +30,12 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.WOOD));
     public static final Block WAX_BASE = register("wax_base", WaxBase::new,
             BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.WOOD));
+    public static final Block WAX_SUGAR = register("wax_sugar", WaxSugar::new,
+            BlockBehaviour.Properties.of().strength(0.2f)
+                    .noOcclusion().friction(0.98f)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.GLASS));
 
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);

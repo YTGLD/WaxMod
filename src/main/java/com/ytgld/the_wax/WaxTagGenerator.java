@@ -23,7 +23,11 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         getOrCreateRawBuilder(ItemTags.PLANKS)
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"));
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
+
+
+        ;
     }
 
 }
