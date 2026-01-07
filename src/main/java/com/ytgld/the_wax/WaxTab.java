@@ -13,11 +13,19 @@ public class WaxTab {
             .title(Component.translatable("itemGroup.the_wax.group"))
             .displayItems((context, entries) -> {
                 entries.accept(BlockInit.Wax);
-                entries.accept(ItemInit.ItemWax);
-                entries.accept(ItemInit.GOLDEN_WAX);
                 entries.accept(BlockInit.WAX_PINE);
                 entries.accept(BlockInit.WAX_BASE);
                 entries.accept(BlockInit.WAX_SUGAR);
+
+
+
+                entries.accept(ItemInit.ItemWax);
+                entries.accept(ItemInit.GOLDEN_WAX);
+                entries.accept(ItemInit.WAX_STRIPS);
+                entries.accept(ItemInit.WAX_CANDLE);
+
+
+
             })
             .build();
 }

@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.apache.logging.log4j.core.appender.rolling.action.IfNot;
@@ -37,6 +38,12 @@ public class BlockInit {
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.GLASS));
 
+    public static final Block WAX_PIPE_CANDLE = register("wax_pipe_candle", WaxPipeCandle::new,
+            BlockBehaviour.Properties.of()
+                    .lightLevel(WaxPipeCandle.LIGHT_EMISSION)
+                    .strength(0.5f)
+                    .randomTicks()
+                    .sound(SoundType.WOOD));
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);
         final ResourceKey<Block> registryKey = ResourceKey.create(Registries.BLOCK, identifier);

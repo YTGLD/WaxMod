@@ -3,6 +3,8 @@ package com.ytgld.the_wax.items.init;
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.items.GoldWax;
 import com.ytgld.the_wax.items.SmallWaxItem;
+import com.ytgld.the_wax.items.WaxPipeCandleItem;
+import com.ytgld.the_wax.items.WaxStrips;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -22,19 +24,36 @@ import java.util.function.Function;
 
 public class ItemInit {
     public static final Item ItemWax = register("item_wax", SmallWaxItem::new,
-            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties(5,1.2f,false))
+            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder()
+                            .nutrition(5).saturationModifier(0.8f).build())
                     .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,
                             new SuspiciousStewEffects(List.of(
                                     new SuspiciousStewEffects.Entry(MobEffects.STRENGTH, 300),
                                     new SuspiciousStewEffects.Entry(MobEffects.REGENERATION,200)))));
     public static final Item GOLDEN_WAX = register("golden_wax", GoldWax::new,
-            new Item.Properties().rarity(Rarity.EPIC).food(new FoodProperties(10,1.2f,false))
+            new Item.Properties().rarity(Rarity.EPIC).food(new FoodProperties.Builder()
+                            .nutrition(10).saturationModifier(0.5f).build())
                     .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,
                             new SuspiciousStewEffects(List.of(
                                     new SuspiciousStewEffects.Entry(MobEffects.ABSORPTION, 1200),
                                     new SuspiciousStewEffects.Entry(MobEffects.STRENGTH, 900),
                                     new SuspiciousStewEffects.Entry(MobEffects.RESISTANCE, 750),
                                     new SuspiciousStewEffects.Entry(MobEffects.REGENERATION,600)))));
+
+    public static final Item WAX_STRIPS = register("wax_strips", WaxStrips::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder()
+                            .nutrition(6).saturationModifier(1.1f).build())
+                    .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,
+                            new SuspiciousStewEffects(List.of(
+                                    new SuspiciousStewEffects.Entry(MobEffects.SPEED, 600)))));
+    public static final Item WAX_CANDLE = register("wax_pipe_candle_item", WaxPipeCandleItem::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON));
+
+
+
+
+
+
     private static Item register(String path, Function<Item.Properties, Item> factory, Item.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);
         final ResourceKey<Item> registryKey = ResourceKey.create(Registries.ITEM, identifier);

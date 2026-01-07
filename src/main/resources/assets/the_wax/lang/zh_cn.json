@@ -1,14 +1,18 @@
 {
   "itemGroup.the_wax.group": "冬垂瓜",
-  "item.the_wax.wax": "冬瓜",
   "block.the_wax.wax": "冬瓜块",
-
-  "item.the_wax.item_wax": "小冬瓜",
-  "item.the_wax.golden_wax": "金冬瓜",
   "block.the_wax.small_wax_golden": "金冬瓜",
   "block.the_wax.wax_sugar": "冬瓜糖块",
-
   "block.the_wax.small_wax": "小冬瓜",
   "block.the_wax.wax_vine_pipe": "冬瓜梗",
-  "block.the_wax.wax_base": "冬垂瓜幼苗"
+  "block.the_wax.wax_base": "冬垂瓜幼苗",
+  "block.the_wax.wax_pipe_candle": "冬瓜蜡烛",
+
+  "item.the_wax.wax": "冬瓜",
+  "item.the_wax.item_wax": "小冬瓜",
+  "item.the_wax.golden_wax": "金冬瓜",
+  "item.the_wax.wax_strips": "冬瓜糖条",
+  "item.the_wax.wax_pipe_candle_item": "冬瓜蜡烛",
+  "item.the_wax.wax_pipe_candle_item.tip": "点燃时获得力量和速度"
+
 }

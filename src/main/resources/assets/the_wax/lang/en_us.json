@@ -1,14 +1,17 @@
 {
   "itemGroup.the_wax.group": "Winter Melon Vine",
-  "item.the_wax.wax": "Winter Melon",
   "block.the_wax.wax": "Winter Melon Block",
-
-  "item.the_wax.item_wax": "Small Winter Melon",
-  "item.the_wax.golden_wax": "Golden Winter Melon",
   "block.the_wax.small_wax_golden": "Golden Winter Melon",
   "block.the_wax.wax_sugar": "Winter Melon Sugar Cubes",
-
   "block.the_wax.small_wax": "Small Winter Melon",
   "block.the_wax.wax_vine_pipe": "Winter Melon Stem",
-  "block.the_wax.wax_base": "Winter Melon Vine Seedling"
+  "block.the_wax.wax_base": "Winter Melon Vine Seedling",
+  "block.the_wax.wax_pipe_candle": "Winter melon candles",
+
+  "item.the_wax.wax": "Winter Melon",
+  "item.the_wax.item_wax": "Small Winter Melon",
+  "item.the_wax.golden_wax": "Golden Winter Melon",
+  "item.the_wax.wax_strips": "Winter melon sugar strips",
+  "item.the_wax.wax_pipe_candle_item": "Winter melon candles",
+  "item.the_wax.wax_pipe_candle_item.tip": "Gives power and speed when ignited"
 }

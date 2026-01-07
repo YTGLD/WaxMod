@@ -11,6 +11,7 @@ public class WaxDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		fabricDataGenerator.createPack().addProvider(WaxTagGenerator::new);
+		fabricDataGenerator.createPack().addProvider(WaxTagGeneratorBlock::new);
 		fabricDataGenerator.createPack().addProvider(TheWaxConfiguredFeatureProvider::new);
 	}
 	@Override
