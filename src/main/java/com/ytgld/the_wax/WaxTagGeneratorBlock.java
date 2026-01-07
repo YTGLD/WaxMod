@@ -19,6 +19,7 @@ public class WaxTagGeneratorBlock extends FabricTagProvider.BlockTagProvider{
     protected void addTags(HolderLookup.Provider provider) {
         getOrCreateRawBuilder(BlockTags.CANDLES)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_pipe_candle"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_honey_candle"))
 
 
         ;

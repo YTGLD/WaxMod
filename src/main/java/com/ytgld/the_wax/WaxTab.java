@@ -23,6 +23,7 @@ public class WaxTab {
                 entries.accept(ItemInit.GOLDEN_WAX);
                 entries.accept(ItemInit.WAX_STRIPS);
                 entries.accept(ItemInit.WAX_CANDLE);
+                entries.accept(ItemInit.PIPE_HONEY_CANDLE);
 
 
 

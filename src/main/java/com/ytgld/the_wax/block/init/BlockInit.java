@@ -2,17 +2,14 @@ package com.ytgld.the_wax.block.init;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.block.*;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import org.apache.logging.log4j.core.appender.rolling.action.IfNot;
 
 import java.util.function.Function;
 
@@ -42,6 +39,12 @@ public class BlockInit {
             BlockBehaviour.Properties.of()
                     .lightLevel(WaxPipeCandle.LIGHT_EMISSION)
                     .strength(0.5f)
+                    .randomTicks()
+                    .sound(SoundType.WOOD));
+    public static final Block PIPE_HONEY_CANDLE = register("pipe_honey_candle", PipeHoneyCandle::new,
+            BlockBehaviour.Properties.of()
+                    .lightLevel(PipeHoneyCandle.LIGHT_EMISSION)
+                    .strength(0.8F)
                     .randomTicks()
                     .sound(SoundType.WOOD));
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {

@@ -1,10 +1,7 @@
 package com.ytgld.the_wax.items.init;
 
 import com.ytgld.the_wax.WaxMod;
-import com.ytgld.the_wax.items.GoldWax;
-import com.ytgld.the_wax.items.SmallWaxItem;
-import com.ytgld.the_wax.items.WaxPipeCandleItem;
-import com.ytgld.the_wax.items.WaxStrips;
+import com.ytgld.the_wax.items.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -48,6 +45,9 @@ public class ItemInit {
                                     new SuspiciousStewEffects.Entry(MobEffects.SPEED, 600)))));
     public static final Item WAX_CANDLE = register("wax_pipe_candle_item", WaxPipeCandleItem::new,
             new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final Item PIPE_HONEY_CANDLE = register("pipe_honey_candle_item", PipeHoneyCandleItem::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON));
+
 
 
 
