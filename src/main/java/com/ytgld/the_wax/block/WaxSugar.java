@@ -33,6 +33,7 @@ public class WaxSugar extends TransparentBlock {
     public static final BooleanProperty SOUTH = BooleanProperty.create("south");
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
 
+
     public WaxSugar(Properties properties) {
         super(properties);
         BlockRenderLayerMap.putBlock(this, ChunkSectionLayer.TRANSLUCENT);
@@ -102,6 +103,7 @@ public class WaxSugar extends TransparentBlock {
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
         return List.of(new ItemStack(BlockInit.WAX_SUGAR));
     }
+
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

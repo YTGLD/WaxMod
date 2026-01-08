@@ -47,11 +47,16 @@ public class ItemInit {
             new Item.Properties().rarity(Rarity.UNCOMMON));
     public static final Item PIPE_HONEY_CANDLE = register("pipe_honey_candle_item", PipeHoneyCandleItem::new,
             new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final Item WAX_JUMP_SLIME_ITEM = register("wax_jump_slime_item", WaxJumpSlimeItem::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON));
 
-
-
-
-
+    public static final Item SMALL_JUMPING_SLIME = register("small_jump_slime", Item::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder()
+                            .nutrition(7).saturationModifier( 1.3f).build())
+                    .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,
+                            new SuspiciousStewEffects(List.of(
+                                    new SuspiciousStewEffects.Entry(MobEffects.SPEED, 1200),
+                                    new SuspiciousStewEffects.Entry(MobEffects.JUMP_BOOST, 1200)))));
 
 
     private static Item register(String path, Function<Item.Properties, Item> factory, Item.Properties settings) {

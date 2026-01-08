@@ -24,6 +24,8 @@ public class WaxTab {
                 entries.accept(ItemInit.WAX_STRIPS);
                 entries.accept(ItemInit.WAX_CANDLE);
                 entries.accept(ItemInit.PIPE_HONEY_CANDLE);
+                entries.accept(ItemInit.WAX_JUMP_SLIME_ITEM);
+                entries.accept(ItemInit.SMALL_JUMPING_SLIME);
 
 
 

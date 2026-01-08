@@ -47,6 +47,15 @@ public class BlockInit {
                     .strength(0.8F)
                     .randomTicks()
                     .sound(SoundType.WOOD));
+    public static final Block WAX_JUMP_SLIME = register("wax_jump_slime", WaxJumpSlime::new,
+            BlockBehaviour.Properties.of().strength(1)
+                    .noOcclusion().friction(0.98f).lightLevel((state)->{
+                        return 8;
+                    })
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.SLIME_BLOCK));
+
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);
         final ResourceKey<Block> registryKey = ResourceKey.create(Registries.BLOCK, identifier);
