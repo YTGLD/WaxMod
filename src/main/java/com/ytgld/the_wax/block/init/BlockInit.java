@@ -63,6 +63,8 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(0.9f).lightLevel((state)->{
                 return 8;
             }).sound(SoundType.WOOD));
+    public static final Block WATER_WAX_BASE = register("water_wax_base", WaterWaxBase::new,
+            BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.WOOD));
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);
         final ResourceKey<Block> registryKey = ResourceKey.create(Registries.BLOCK, identifier);

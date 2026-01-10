@@ -11,6 +11,7 @@
   "block.the_wax.wax_jump_slime": "Winter melon slime jelly",
   "block.the_wax.water_wax": "Deep-sea winter melon",
   "block.the_wax.huge_pipe": "Giant melon stem",
+  "block.the_wax.water_wax_base": "Deep-sea winter melon seedlings",
 
   "item.the_wax.wax": "Winter Melon",
   "item.the_wax.item_wax": "Small Winter Melon",
@@ -24,5 +25,7 @@
   "item.the_wax.wax_jump_slime_item.tip": "Can bounce as a slime block",
   "item.the_wax.wax_jump_slime_item.tip.2": "Drop some food when destroyed",
   "item.the_wax.pipe_honey_candle_item.tip": "Grants long health regeneration and luck when ignited",
-  "item.the_wax.small_jump_slime": "Winter melon flavored small jelly"
+  "item.the_wax.small_jump_slime": "Winter melon flavored small jelly",
+  "item.the_wax.small_water_wax": "Deep-sea winter melon slices",
+  "item.the_wax.wax_bowl": "Winter melon Bowl"
 }

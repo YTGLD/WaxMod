@@ -57,7 +57,12 @@ public class ItemInit {
                             new SuspiciousStewEffects(List.of(
                                     new SuspiciousStewEffects.Entry(MobEffects.SPEED, 1200),
                                     new SuspiciousStewEffects.Entry(MobEffects.JUMP_BOOST, 1200)))));
-
+    public static final Item SMALL_WATER_WAX = register("small_water_wax", Item::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().alwaysEdible()
+                            .nutrition(4).saturationModifier( 0.5f).build())
+                    .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,
+                            new SuspiciousStewEffects(List.of(
+                                    new SuspiciousStewEffects.Entry(MobEffects.WATER_BREATHING, 1200)))));
 
     private static Item register(String path, Function<Item.Properties, Item> factory, Item.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);

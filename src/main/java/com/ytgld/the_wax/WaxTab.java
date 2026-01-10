@@ -12,9 +12,12 @@ public class WaxTab {
             .icon(() -> new ItemStack(BlockInit.Wax))
             .title(Component.translatable("itemGroup.the_wax.group"))
             .displayItems((context, entries) -> {
+                entries.accept(BlockInit.WAX_BASE);
+                entries.accept(BlockInit.WATER_WAX_BASE);
+
+
                 entries.accept(BlockInit.Wax);
                 entries.accept(BlockInit.WAX_PINE);
-                entries.accept(BlockInit.WAX_BASE);
                 entries.accept(BlockInit.WAX_SUGAR);
                 entries.accept(BlockInit.WATER_WAX);
                 entries.accept(BlockInit.HUGE_PIPE);
@@ -28,6 +31,7 @@ public class WaxTab {
                 entries.accept(ItemInit.PIPE_HONEY_CANDLE);
                 entries.accept(ItemInit.WAX_JUMP_SLIME_ITEM);
                 entries.accept(ItemInit.SMALL_JUMPING_SLIME);
+                entries.accept(ItemInit.SMALL_WATER_WAX);
 
 
 

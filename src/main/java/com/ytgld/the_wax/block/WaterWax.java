@@ -2,9 +2,12 @@ package com.ytgld.the_wax.block;
 
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.items.init.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -79,6 +82,10 @@ public class WaterWax  extends Block {
     }
     @Override
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        if (Mth.nextInt(RandomSource.create(), 1, 4) == 1) {
+            return List.of(new ItemStack(ItemInit.SMALL_WATER_WAX.asItem(),Mth.nextInt(RandomSource.create(),2,5)));
+        }
+
         return List.of(new ItemStack(BlockInit.WATER_WAX.asItem()));
     }
 
