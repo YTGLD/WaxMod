@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": "the_wax:wax_strips",
-    "B": "the_wax:wax",
+    "B": "#the_wax:wax",
     "C": "minecraft:slime_block",
     "E": "minecraft:sweet_berries"
   },

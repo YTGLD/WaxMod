@@ -24,7 +24,7 @@ public class WaxTab {
 
 
 
-                entries.accept(ItemInit.ItemWax);
+                entries.accept(ItemInit.ITEM_WAX);
                 entries.accept(ItemInit.GOLDEN_WAX);
                 entries.accept(ItemInit.WAX_STRIPS);
                 entries.accept(ItemInit.WAX_CANDLE);

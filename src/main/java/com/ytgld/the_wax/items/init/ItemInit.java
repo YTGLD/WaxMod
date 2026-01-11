@@ -12,15 +12,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
-import net.minecraft.world.item.component.UseEffects;
-import net.minecraft.world.level.block.Block;
 
 import java.util.List;
-import java.util.Map;
 import java.util.function.Function;
 
 public class ItemInit {
-    public static final Item ItemWax = register("item_wax", SmallWaxItem::new,
+    public static final Item ITEM_WAX = register("item_wax", SmallWaxItem::new,
             new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder()
                             .nutrition(5).saturationModifier(0.8f).build())
                     .component(DataComponents.SUSPICIOUS_STEW_EFFECTS,

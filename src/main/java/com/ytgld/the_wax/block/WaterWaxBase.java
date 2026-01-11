@@ -43,16 +43,10 @@ public class WaterWaxBase extends MushroomBlock implements BonemealableBlock {
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
         return List.of(new ItemStack(BlockInit.WAX_BASE));
     }
-    @Override
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
-        return blockState.isFaceSturdy(blockGetter, blockPos, Direction.UP) && !blockState.is(Blocks.MAGMA_BLOCK);
-    }
 
-    @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        FluidState fluidState = blockPlaceContext.getLevel().getFluidState(blockPlaceContext.getClickedPos());
-        return fluidState.is(FluidTags.WATER) && fluidState.getAmount() == 8 ? super.getStateForPlacement(blockPlaceContext) : null;
+    protected boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        return levelReader.getBlockState(blockPos.below()).isSolid()&&levelReader.getBlockState(blockPos).is(Blocks.WATER);
     }
 
     @Override

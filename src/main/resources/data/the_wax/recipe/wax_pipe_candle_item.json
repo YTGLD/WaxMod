@@ -4,7 +4,7 @@
   "key": {
     "A": "#minecraft:candles",
     "B": "the_wax:wax_strips",
-    "C": "the_wax:wax_vine_pipe"
+    "C": "#the_wax:pipe"
   },
   "pattern": [
     "A",

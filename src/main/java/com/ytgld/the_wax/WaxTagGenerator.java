@@ -10,6 +10,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagBuilder;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
@@ -19,7 +20,10 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
                            CompletableFuture<HolderLookup.Provider>
                                    registriesFuture) {
         super(output, registriesFuture);
+
     }
+    public static final TagKey<Item> WAX = bind("wax");
+    public static final TagKey<Item> PIPE = bind("pipe");
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         getOrCreateRawBuilder(ItemTags.PLANKS)
@@ -29,6 +33,18 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
 
         ;
-    }
+        getOrCreateRawBuilder(PIPE)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
 
+        ;
+        getOrCreateRawBuilder(WAX)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
+
+        ;
+    }
+    private static TagKey<Item> bind(String string) {
+        return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,string));
+    }
 }

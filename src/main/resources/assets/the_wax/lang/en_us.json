@@ -27,5 +27,6 @@
   "item.the_wax.pipe_honey_candle_item.tip": "Grants long health regeneration and luck when ignited",
   "item.the_wax.small_jump_slime": "Winter melon flavored small jelly",
   "item.the_wax.small_water_wax": "Deep-sea winter melon slices",
-  "item.the_wax.wax_bowl": "Winter melon Bowl"
+  "item.the_wax.wax_bowl.effect.empty": "Winter melon Bowl"
+
 }

@@ -100,6 +100,6 @@ public class SmallWax extends Block {
         if (blockState.getValue(IS_GOLDEN)){
             return List.of(new ItemStack(ItemInit.GOLDEN_WAX));
         }
-        return List.of(new ItemStack(ItemInit.ItemWax));
+        return List.of(new ItemStack(ItemInit.ITEM_WAX));
     }
 }

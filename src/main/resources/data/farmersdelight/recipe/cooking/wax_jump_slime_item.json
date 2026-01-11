@@ -5,7 +5,7 @@
   "ingredients": [
     "minecraft:sweet_berries",
     "minecraft:slime_block",
-    "the_wax:wax",
+    "#the_wax:wax",
     "the_wax:wax_strips",
     "the_wax:wax_strips"
   ],
