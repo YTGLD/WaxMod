@@ -71,6 +71,6 @@ public class BigWaxFeature extends Feature<WaxFeatureConfig> {
                 }
             }
         }
-
+        world.setBlock(testPos.offset(0,-2,0), BlockInit.WAX_FLOWER.defaultBlockState(), 3);
     }
 }

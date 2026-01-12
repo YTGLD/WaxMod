@@ -71,8 +71,10 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(0.45F).lightLevel((state)->{
                 return 8;
             }).sound(SoundType.WOOD));
-
-
+    public static final Block WAX_FLOWER = register("wax_flower", WaxFlower::new,
+            BlockBehaviour.Properties.of().strength(0.1F).lightLevel((state)->{
+                return 15;
+            }).sound(SoundType.WET_GRASS));
 
 
 

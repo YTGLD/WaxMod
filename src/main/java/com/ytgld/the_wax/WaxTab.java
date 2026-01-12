@@ -24,6 +24,7 @@ public class WaxTab {
                 entries.accept(BlockInit.WAX_SPONGE);
                 entries.accept(BlockInit.WET_WAX_SPONGE);
                 entries.accept(BlockInit.PIPE_WALL);
+                entries.accept(BlockInit.WAX_FLOWER);
 
 
 
