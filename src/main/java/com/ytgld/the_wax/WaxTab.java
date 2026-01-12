@@ -21,6 +21,9 @@ public class WaxTab {
                 entries.accept(BlockInit.WAX_SUGAR);
                 entries.accept(BlockInit.WATER_WAX);
                 entries.accept(BlockInit.HUGE_PIPE);
+                entries.accept(BlockInit.WAX_SPONGE);
+                entries.accept(BlockInit.WET_WAX_SPONGE);
+                entries.accept(BlockInit.PIPE_WALL);
 
 
 

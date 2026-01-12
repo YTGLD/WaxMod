@@ -27,7 +27,7 @@ public class WaterWaxFeature extends Feature<WaterFeatureConfig> {
         BlockPos testPos = new BlockPos(origin);
 
         int waterHeight = 0;
-        for (int i = 0; i < 10 && world.getBlockState(testPos.above()).is(Blocks.WATER); i++) {
+        for (int i = 0; i < 10+Mth.nextInt(RandomSource.create(),1,5) && world.getBlockState(testPos.above()).is(Blocks.WATER); i++) {
             waterHeight = i;
         }
         for (int i = 0; i < waterHeight; i++) {
@@ -60,7 +60,7 @@ public class WaterWaxFeature extends Feature<WaterFeatureConfig> {
                 }
             }
         }
-
+        world.setBlock(testPos.offset(0,0,0), BlockInit.WET_WAX_SPONGE.defaultBlockState(), 3);
     }
     public void addMain(BlockPos testPos, WorldGenLevel world) {
         for (int i = -2; i <= 2; i++) {

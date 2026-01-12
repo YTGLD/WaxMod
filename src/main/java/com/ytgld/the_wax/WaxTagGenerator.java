@@ -36,6 +36,7 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
         getOrCreateRawBuilder(PIPE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
 
         ;
         getOrCreateRawBuilder(WAX)

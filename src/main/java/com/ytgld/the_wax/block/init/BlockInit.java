@@ -6,9 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
@@ -65,6 +63,24 @@ public class BlockInit {
             }).sound(SoundType.WOOD));
     public static final Block WATER_WAX_BASE = register("water_wax_base", WaterWaxBase::new,
             BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.WOOD));
+    public static final Block WAX_SPONGE = register("wax_sponge", WaxSponge::new,
+            BlockBehaviour.Properties.of().strength(0.3f).sound(SoundType.SPONGE));
+    public static final Block WET_WAX_SPONGE = register("wet_wax_sponge", WetWaxSponge::new,
+            BlockBehaviour.Properties.of().strength(0.45F).sound(SoundType.WET_SPONGE));
+    public static final Block PIPE_WALL = register("pipe_wall", PipeWall::new,
+            BlockBehaviour.Properties.of().strength(0.45F).lightLevel((state)->{
+                return 8;
+            }).sound(SoundType.WOOD));
+
+
+
+
+
+
+
+
+
+
     private static Block register(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         final Identifier identifier = Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, path);
         final ResourceKey<Block> registryKey = ResourceKey.create(Registries.BLOCK, identifier);
