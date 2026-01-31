@@ -14,7 +14,7 @@ public class WaxTab {
             .displayItems((context, entries) -> {
                 entries.accept(BlockInit.NETHER_WAX_BASE);
                 entries.accept(BlockInit.WATER_WAX_BASE);
-                entries.accept(BlockInit.NETHER_WAX_BASE);
+                entries.accept(BlockInit.WAX_BASE);
 
 
                 entries.accept(BlockInit.Wax);

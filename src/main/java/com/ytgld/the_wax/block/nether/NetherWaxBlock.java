@@ -37,10 +37,6 @@ public class NetherWaxBlock extends Block {
     public static final BooleanProperty DOWN = PipeBlock.DOWN;
 
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
-    @Override
-    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
-        return List.of(new ItemStack(this.asItem()));
-    }
 
     @Override
     protected MapCodec<? extends Block> codec() {

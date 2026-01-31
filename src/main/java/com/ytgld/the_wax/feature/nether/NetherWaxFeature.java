@@ -50,7 +50,7 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
             for (int j = 0; j < 3; j++) {
                 for (int k = 0; k < 3; k++) {
                     BlockPos pos = testPos.offset(i - 1, j - 1, k - 1);
-                    if (world.getBlockState(pos).isAir()) {
+                    if (world.getBlockState(pos).isAir()||world.getBlockState(pos).is(BlockInit.NETHER_PIPE)) {
                         world.setBlock(pos, BlockInit.NETHER_WAX.defaultBlockState(), 3);
                     }
                 }
