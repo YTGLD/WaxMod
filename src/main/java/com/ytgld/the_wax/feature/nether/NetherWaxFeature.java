@@ -5,6 +5,8 @@ import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 
@@ -32,18 +34,44 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
             BlockPos currentPos = testPos.below(i);
             world.setBlock(testPos.below(i), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
 
-            if (i == layers - 2) {
+            if (i == layers - 3) {
                 world.setBlock(currentPos.east(), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
                 world.setBlock(currentPos.north(), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
                 world.setBlock(currentPos.west(), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
                 world.setBlock(currentPos.south(), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
             }
+            if (i == layers - 2) {
+                world.setBlock(currentPos.offset(1,0,1), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                world.setBlock(currentPos.offset(-1,0,1), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                world.setBlock(currentPos.offset(-1,0,-1), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                world.setBlock(currentPos.offset(1,0,-1), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+            }
             if (i == layers - 1) {
                 addMain(currentPos.below(), world);
+                addMainCube(currentPos.below(),world);
             }
         }
 
         return true;
+    }
+    public void addMainCube(BlockPos testPos, WorldGenLevel world) {
+        for (int i = -2; i <= 2; i++) {
+            for (int j = -2; j <= 2; j++) {
+                BlockPos posXY = testPos.offset(i, j, 0);
+                if (world.getBlockState(posXY).isAir()) {
+                    world.setBlock(posXY, BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                }
+
+                BlockPos posXZ = testPos.offset(i, 0, j);
+                if (world.getBlockState(posXZ).isAir()) {
+                    world.setBlock(posXZ, BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                }
+                BlockPos posYZ = testPos.offset(0, i, j);
+                if (world.getBlockState(posYZ).isAir()) {
+                    world.setBlock(posYZ, BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+                }
+            }
+        }
     }
     public void addMain(BlockPos testPos,WorldGenLevel world){
         for (int i = 0; i < 3; i++) {
@@ -56,7 +84,7 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
                 }
             }
         }
-        world.setBlock(testPos.offset(0,-2,0), BlockInit.WAX_FLOWER.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(0,-3,0), BlockInit.WAX_FLOWER.defaultBlockState(), 3);
     }
 }
 

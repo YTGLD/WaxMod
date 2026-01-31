@@ -38,6 +38,10 @@ public class NetherWaxBlock extends Block {
 
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
 
+
+    public static final BooleanProperty OFFSET_1 = BooleanProperty.create("offset_1");
+    public static final BooleanProperty OFFSET_2 = BooleanProperty.create("offset_2");
+
     @Override
     protected MapCodec<? extends Block> codec() {
         return CODEC;
@@ -53,6 +57,8 @@ public class NetherWaxBlock extends Block {
                         .setValue(WEST, true)
                         .setValue(UP, true)
                         .setValue(DOWN, true)
+                        .setValue(OFFSET_1, false)
+                        .setValue(OFFSET_2, false)
         );
     }
 
@@ -86,6 +92,7 @@ public class NetherWaxBlock extends Block {
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
         BlockGetter blockView = blockPlaceContext.getLevel();
         BlockPos blockPos = blockPlaceContext.getClickedPos();
+        int offset = blockPos.getX() + blockPos.getY() + blockPos.getZ();
         return this.defaultBlockState()
                 .setValue(DOWN, !blockView.getBlockState(blockPos.below()).is(this))
                 .setValue(UP, !blockView.getBlockState(blockPos.above()).is(this))
@@ -94,6 +101,8 @@ public class NetherWaxBlock extends Block {
                 .setValue(SOUTH, !blockView.getBlockState(blockPos.south()).is(this))
                 .setValue(WEST, !blockView.getBlockState(blockPos.west()).is(this))
 
+                .trySetValue(OFFSET_1,offset % 4==0)
+                .trySetValue(OFFSET_2,offset % 3==0)
                 ;
     }
 
@@ -105,7 +114,9 @@ public class NetherWaxBlock extends Block {
                 NORTH,
                 EAST,
                 SOUTH,
-                WEST
+                WEST,
+                OFFSET_1,
+                OFFSET_2
 
 
         );

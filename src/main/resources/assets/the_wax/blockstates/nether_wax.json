@@ -1,5 +1,6 @@
 {
   "multipart": [
+
     {
       "apply": {
         "model": "the_wax:block/nether_wax"
