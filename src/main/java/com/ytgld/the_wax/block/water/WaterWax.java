@@ -1,6 +1,7 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.water;
 
 import com.mojang.serialization.MapCodec;
+import com.ytgld.the_wax.block.WaxGourd;
 import com.ytgld.the_wax.block.init.BlockInit;
 import com.ytgld.the_wax.items.init.ItemInit;
 import net.minecraft.core.BlockPos;
@@ -13,22 +14,19 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.storage.loot.LootParams;
 import org.jspecify.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
 
-
-public class WaxGourd  extends Block {
+public class WaterWax  extends Block {
     public static final MapCodec<WaxGourd> CODEC = simpleCodec(WaxGourd::new);
     public static final BooleanProperty NORTH = PipeBlock.NORTH;
     public static final BooleanProperty EAST = PipeBlock.EAST;
@@ -36,16 +34,14 @@ public class WaxGourd  extends Block {
     public static final BooleanProperty WEST = PipeBlock.WEST;
     public static final BooleanProperty UP = PipeBlock.UP;
     public static final BooleanProperty DOWN = PipeBlock.DOWN;
-    public static final BooleanProperty ON_GROUND = BooleanProperty.create("on_ground");
-    public static final BooleanProperty IN_TOP = BooleanProperty.create("in_top");
-    public static final BooleanProperty HEAD = BooleanProperty.create("head");
+    public static final BooleanProperty OFFSET = BooleanProperty.create("offset");
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
 
     @Override
     protected MapCodec<? extends Block> codec() {
         return CODEC;
     }
-    public WaxGourd(BlockBehaviour.Properties settings) {
+    public WaterWax(BlockBehaviour.Properties settings) {
         super(settings);
         this.registerDefaultState(
                 this.stateDefinition.any()
@@ -55,10 +51,7 @@ public class WaxGourd  extends Block {
                         .setValue(WEST, true)
                         .setValue(UP, true)
                         .setValue(DOWN, true)
-
-                        .setValue(ON_GROUND, false)
-                        .setValue(IN_TOP, false)
-                        .setValue(HEAD, false)
+                        .setValue(OFFSET, false)
         );
     }
 
@@ -90,21 +83,18 @@ public class WaxGourd  extends Block {
     @Override
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
         List<ItemStack> as = super.getDrops(blockState, builder);
-        if (Mth.nextInt(RandomSource.create(), 0, 100) <= 50) {
-            as.add(new ItemStack(ItemInit.ITEM_WAX));
+        if (Mth.nextInt(RandomSource.create(), 0, 100) <= 80) {
+            as.add(new ItemStack(ItemInit.SMALL_WATER_WAX,Mth.nextInt(RandomSource.create(),1,2)));
         }
         return as;
     }
+
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
         BlockGetter blockView = blockPlaceContext.getLevel();
         BlockPos blockPos = blockPlaceContext.getClickedPos();
-        BlockState stateDown = blockView.getBlockState(blockPos.below());
-        boolean isTop = false;
-        if (stateDown.hasProperty(ON_GROUND)) {
-            isTop = stateDown.getValue(ON_GROUND);
-        }
+        int offset = blockPos.getX() + blockPos.getY() + blockPos.getZ();
         return this.defaultBlockState()
                 .setValue(DOWN, !blockView.getBlockState(blockPos.below()).is(this))
                 .setValue(UP, !blockView.getBlockState(blockPos.above()).is(this))
@@ -112,17 +102,8 @@ public class WaxGourd  extends Block {
                 .setValue(EAST, !blockView.getBlockState(blockPos.east()).is(this))
                 .setValue(SOUTH, !blockView.getBlockState(blockPos.south()).is(this))
                 .setValue(WEST, !blockView.getBlockState(blockPos.west()).is(this))
+                .setValue(OFFSET,offset%2==0)
 
-
-                .setValue(ON_GROUND, !blockView.getBlockState(blockPos.below()).is(this))
-                .setValue(IN_TOP, blockView.getBlockState(blockPos.above()).is(Blocks.AIR)&&!isTop)
-                .setValue(HEAD,
-                        blockView.getBlockState(blockPos.west()).is(this)
-                                && blockView.getBlockState(blockPos.north()).is(this)
-                                && blockView.getBlockState(blockPos.east()).is(this)
-                                && blockView.getBlockState(blockPos.south()).is(this)
-                                && blockView.getBlockState(blockPos.below()).hasProperty(ON_GROUND)
-                                && !blockView.getBlockState(blockPos.below()).getValue(ON_GROUND))
                 ;
     }
 
@@ -134,13 +115,10 @@ public class WaxGourd  extends Block {
                 NORTH,
                 EAST,
                 SOUTH,
-                WEST
-                ,
-                IN_TOP,
-                ON_GROUND,
-                HEAD
-
+                WEST,
+                OFFSET
         );
     }
 }
+
 

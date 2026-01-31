@@ -17,6 +17,27 @@ public class WaxTagGeneratorBlock extends FabricTagProvider.BlockTagProvider{
     }
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_jump_slime"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"small_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
+        ;
+        getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_HOE)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_pipe_candle"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_honey_candle"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_sponge"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wet_wax_sponge"))
+
+        ;
         getOrCreateRawBuilder(BlockTags.CANDLES)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_pipe_candle"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_honey_candle"))
@@ -24,8 +45,6 @@ public class WaxTagGeneratorBlock extends FabricTagProvider.BlockTagProvider{
         ;
         getOrCreateRawBuilder(BlockTags.WALLS)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
-
-
         ;
     }
 

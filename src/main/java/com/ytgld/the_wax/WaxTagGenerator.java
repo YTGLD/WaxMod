@@ -31,17 +31,21 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
 
         ;
         getOrCreateRawBuilder(PIPE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
 
         ;
         getOrCreateRawBuilder(WAX)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
 
         ;
     }

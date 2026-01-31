@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.water;
 
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
@@ -7,7 +7,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.WetSpongeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;

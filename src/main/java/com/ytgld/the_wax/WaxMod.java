@@ -13,7 +13,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.entity.FuelValues;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -37,14 +36,14 @@ public class WaxMod implements ModInitializer {
 		LootTableEvents.MODIFY.register((ResourceKey<LootTable> var1, LootTable.Builder var2, LootTableSource var3, HolderLookup.Provider var4)->{
 			if (var1.equals(BuiltInLootTables.SNIFFER_DIGGING)){
 				var2.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-						.add(LootItem.lootTableItem(BlockInit.WAX_BASE)
+						.add(LootItem.lootTableItem(BlockInit.NETHER_WAX_BASE)
 								.when(LootItemRandomChanceCondition.randomChance(0.25f))));
 			}
 		});
 		FuelRegistryEvents.BUILD.register((FuelValues.Builder var1, FuelRegistryEvents.Context var2) -> {
 			var1.add(BlockInit.Wax, 500);
 			var1.add(BlockInit.WAX_PINE, 600);
-			var1.add(BlockInit.WAX_BASE, 300);
+			var1.add(BlockInit.NETHER_WAX_BASE, 300);
 			var1.add(BlockInit.HUGE_PIPE, 600);
 			var1.add(BlockInit.PIPE_WALL, 100);
 		});

@@ -24,6 +24,7 @@ public class TheWaxConfiguredFeatureProvider  extends FabricDynamicRegistryProvi
     protected void configure(HolderLookup.Provider registries, Entries entries) {
         add(registries, entries, TheConfiguredFeatures.BIG_WAX);
         add(registries, entries, TheConfiguredFeatures.HUGE_WATER_WAX);
+        add(registries, entries, TheConfiguredFeatures.HUGE_NETHER_WAX);
     }
     private void add(HolderLookup.Provider registries, Entries entries, ResourceKey<ConfiguredFeature<?, ?>> resourceKey) {
         Optional<? extends HolderLookup.RegistryLookup<ConfiguredFeature<?, ?>>> configuredFeatureRegistryLookup =

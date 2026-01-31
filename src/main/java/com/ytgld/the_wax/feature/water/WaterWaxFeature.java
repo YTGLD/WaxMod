@@ -1,18 +1,14 @@
-package com.ytgld.the_wax.feature;
+package com.ytgld.the_wax.feature.water;
 
 import com.mojang.serialization.Codec;
-import com.ytgld.the_wax.block.WaxGourd;
-import com.ytgld.the_wax.block.WaxVinePipe;
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import org.apache.logging.log4j.core.appender.rolling.action.IfNot;
 
 public class WaterWaxFeature extends Feature<WaterFeatureConfig> {
 

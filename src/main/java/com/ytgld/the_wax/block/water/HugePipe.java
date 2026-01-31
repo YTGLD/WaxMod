@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.water;
 
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.world.item.ItemStack;

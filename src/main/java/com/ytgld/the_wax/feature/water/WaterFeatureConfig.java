@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.feature;
+package com.ytgld.the_wax.feature.water;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

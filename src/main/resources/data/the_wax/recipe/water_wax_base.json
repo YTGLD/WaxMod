@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": "minecraft:heart_of_the_sea",
+    "A": "minecraft:diamond",
     "B": "the_wax:wax_base",
     "C": "minecraft:lapis_lazuli"
   },
