@@ -84,7 +84,16 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
                 }
             }
         }
-        world.setBlock(testPos.offset(0,-3,0), BlockInit.WAX_FLOWER.defaultBlockState(), 3);
+
+        world.setBlock(testPos.offset(1,-2,0), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(0,-2,-1), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(-1,-2,0), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(0,-2,1), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+
+
+        world.setBlock(testPos.offset(0,-2,0), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(0,-3,0), BlockInit.NETHER_WAX.defaultBlockState(), 3);
+        world.setBlock(testPos.offset(0,-4,0), BlockInit.NETHER_FLOWER.defaultBlockState(), 3);
     }
 }
 

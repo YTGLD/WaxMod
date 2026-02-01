@@ -28,6 +28,7 @@ public class WaxTab {
                 entries.accept(BlockInit.WAX_FLOWER);
                 entries.accept(BlockInit.NETHER_WAX);
                 entries.accept(BlockInit.NETHER_PIPE);
+                entries.accept(BlockInit.NETHER_FLOWER);
 
 
 
