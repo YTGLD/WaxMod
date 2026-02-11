@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "the_wax:block/nether_pipe_other_top",
+    "side": "the_wax:block/nether_pipe_other"
+  }
+}

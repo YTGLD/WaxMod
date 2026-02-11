@@ -10,6 +10,8 @@
     "the_wax:wax_jump_slime",
     "the_wax:small_wax",
     "the_wax:nether_wax",
-    "the_wax:nether_pipe"
+    "the_wax:nether_pipe",
+    "the_wax:nether_pipe_other",
+    "the_wax:nether_pipe_planks"
   ]
 }

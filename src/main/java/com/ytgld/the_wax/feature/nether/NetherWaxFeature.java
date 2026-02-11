@@ -5,8 +5,6 @@ import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 
@@ -32,7 +30,7 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
         for (int i = 0; i < layers; i++) {
 
             BlockPos currentPos = testPos.below(i);
-            world.setBlock(testPos.below(i), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
+            world.setBlock(testPos.below(i), BlockInit.NETHER_PIPE_OTHER.defaultBlockState(), 3);
 
             if (i == layers - 3) {
                 world.setBlock(currentPos.east(), BlockInit.NETHER_PIPE.defaultBlockState(), 3);
@@ -78,7 +76,9 @@ public class NetherWaxFeature extends Feature<NetherWaxFeatureConfig> {
             for (int j = 0; j < 3; j++) {
                 for (int k = 0; k < 3; k++) {
                     BlockPos pos = testPos.offset(i - 1, j - 1, k - 1);
-                    if (world.getBlockState(pos).isAir()||world.getBlockState(pos).is(BlockInit.NETHER_PIPE)) {
+                    if (world.getBlockState(pos).isAir()
+                            ||world.getBlockState(pos).is(BlockInit.NETHER_PIPE)
+                            ||world.getBlockState(pos).is(BlockInit.NETHER_PIPE_OTHER)) {
                         world.setBlock(pos, BlockInit.NETHER_WAX.defaultBlockState(), 3);
                     }
                 }

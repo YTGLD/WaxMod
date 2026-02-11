@@ -48,6 +48,7 @@ public class WaxMod implements ModInitializer {
 			var1.add(BlockInit.PIPE_WALL, 100);
 			var1.add(BlockInit.NETHER_WAX, 6000);
 			var1.add(BlockInit.NETHER_PIPE, 2400);
+			var1.add(BlockInit.NETHER_PIPE_OTHER, 2400);
 		});
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MOD_ID, "the_wax"), WaxTab.TEST_GROUP);
 	}

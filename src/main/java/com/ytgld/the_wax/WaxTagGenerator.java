@@ -24,15 +24,16 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
     }
     public static final TagKey<Item> WAX = bind("wax");
     public static final TagKey<Item> PIPE = bind("pipe");
+    public static final TagKey<Item> NETHER_PIPE = bind("nether_pipe");
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         getOrCreateRawBuilder(ItemTags.PLANKS)
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_vine_pipe"))
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
-                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_planks"))
+
+        ;
+        getOrCreateRawBuilder(NETHER_PIPE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_other"))
 
         ;
         getOrCreateRawBuilder(PIPE)
@@ -40,6 +41,7 @@ public class WaxTagGenerator extends FabricTagProvider.ItemTagProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_other"))
 
         ;
         getOrCreateRawBuilder(WAX)

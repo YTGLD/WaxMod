@@ -2,10 +2,7 @@ package com.ytgld.the_wax.block.init;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.block.*;
-import com.ytgld.the_wax.block.nether.NetherFlower;
-import com.ytgld.the_wax.block.nether.NetherPipe;
-import com.ytgld.the_wax.block.nether.NetherWaxBase;
-import com.ytgld.the_wax.block.nether.NetherWaxBlock;
+import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -89,12 +86,16 @@ public class BlockInit {
             }).sound(SoundType.WOOD));
     public static final Block NETHER_PIPE = register("nether_pipe", NetherPipe::new,
             BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD));
+    public static final Block NETHER_PIPE_OTHER = register("nether_pipe_other", NetherPipeOther::new,
+            BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD));
     public static final Block NETHER_WAX_BASE = register("nether_wax_base", NetherWaxBase::new,
             BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.WOOD));
     public static final Block NETHER_FLOWER = register("nether_flower", NetherFlower::new,
             BlockBehaviour.Properties.of().strength(0.8f).lightLevel((state)->{
                 return 11;
             }).sound(SoundType.GRASS));
+    public static final Block NETHER_PIPE_PLANKS = register("nether_pipe_planks", NetherPipePlanks::new,
+            BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD));
 
 
 

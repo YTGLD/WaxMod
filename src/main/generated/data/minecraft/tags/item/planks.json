@@ -1,10 +1,5 @@
 {
   "values": [
-    "the_wax:wax",
-    "the_wax:wax_vine_pipe",
-    "the_wax:water_wax",
-    "the_wax:huge_pipe",
-    "the_wax:nether_wax",
-    "the_wax:nether_pipe"
+    "the_wax:nether_pipe_planks"
   ]
 }

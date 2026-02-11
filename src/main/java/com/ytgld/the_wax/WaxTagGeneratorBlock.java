@@ -30,6 +30,8 @@ public class WaxTagGeneratorBlock extends FabricTagProvider.BlockTagProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"small_wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_other"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_planks"))
         ;
         getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_pipe_candle"))

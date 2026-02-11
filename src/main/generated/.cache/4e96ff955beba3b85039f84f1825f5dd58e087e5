@@ -1,4 +1,5 @@
 // 1.21.11	-999999999-01-01T00:00:00	The Wax/Tags for minecraft:item
-ecbf63d7457d36d6ed2547935af1d4dbd818e8c0 data/minecraft/tags/item/planks.json
-9b884a7c01912f1ada4a47e324ec12425f39ee19 data/the_wax/tags/item/pipe.json
+bb381343efad74a1da33ef677319df9cb4d10937 data/minecraft/tags/item/planks.json
+adfdbf7980d8c0efec37b4491061501bb7a012f6 data/the_wax/tags/item/nether_pipe.json
+1029b9d7a006510eadda36141dfd8c767537de24 data/the_wax/tags/item/pipe.json
 4518669263a9e415b0c4b65724d7026f81f01a4c data/the_wax/tags/item/wax.json
