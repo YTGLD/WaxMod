@@ -18,6 +18,9 @@
 		"main": [
 			"com.ytgld.the_wax.WaxMod"
 		],
+		"client": [
+			"com.ytgld.the_wax.WaxModClient"
+		],
 		"fabric-datagen": [
 			"com.ytgld.the_wax.WaxDataGenerator"
 		]

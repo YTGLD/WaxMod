@@ -19,7 +19,7 @@ import java.util.List;
 public class NetherWaxBase extends MushroomBlock implements BonemealableBlock {
     public NetherWaxBase(Properties properties) {
         super(TheConfiguredFeatures.HUGE_NETHER_WAX, properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
     @Override
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {

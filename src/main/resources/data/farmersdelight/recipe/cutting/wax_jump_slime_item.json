@@ -17,6 +17,5 @@
       }
     }
   ],
-  "sound": "minecraft:item.axe.strip",
   "tool": "#c:tools/knife"
 }

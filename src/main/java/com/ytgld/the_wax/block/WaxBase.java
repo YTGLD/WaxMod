@@ -19,7 +19,7 @@ import java.util.List;
 public class WaxBase extends MushroomBlock implements BonemealableBlock {
     public WaxBase(Properties properties) {
         super(TheConfiguredFeatures.BIG_WAX, properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
 
     @Override

@@ -26,7 +26,7 @@ public class WaxJumpSlime extends SlimeBlock {
     );
     public WaxJumpSlime(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
     @Override
     protected boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {

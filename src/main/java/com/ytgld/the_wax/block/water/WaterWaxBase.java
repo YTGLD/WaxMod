@@ -27,7 +27,7 @@ import java.util.List;
 public class WaterWaxBase extends MushroomBlock implements BonemealableBlock {
     public WaterWaxBase(Properties properties) {
         super(TheConfiguredFeatures.HUGE_WATER_WAX, properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
     private static final VoxelShape SHAPE_ = Block.column(6.0, 0.0, 16);
 

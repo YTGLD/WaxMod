@@ -21,13 +21,13 @@ import java.util.List;
 public class NetherFlower extends SporeBlossomBlock {
     public NetherFlower(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
     private static final VoxelShape TEST_SHAPE_POST = Block.column(2.0, 0.0, 16.0);
 
     @Override
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
-        return List.of(new ItemStack(this.asItem(), Mth.nextInt(RandomSource.create(),5,16)));
+        return List.of(new ItemStack(this.asItem()));
     }
 
     @Override

@@ -32,7 +32,7 @@ public class WaxVinePipe  extends PipeBlock {
 
     public WaxVinePipe(BlockBehaviour.Properties properties) {
         super(10.0F, properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
         this.registerDefaultState(
                 this.stateDefinition
                         .any()

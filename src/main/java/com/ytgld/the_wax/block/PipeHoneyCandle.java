@@ -54,8 +54,8 @@ public class PipeHoneyCandle extends CandleBlock {
     );
     public PipeHoneyCandle(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
+        
     }
     @Override
     public boolean isRandomlyTicking(BlockState pState) {

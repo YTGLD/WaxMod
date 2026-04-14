@@ -37,7 +37,7 @@ public class WaxSugar extends TransparentBlock {
 
     public WaxSugar(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
         this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.FALSE)
                 .setValue(DOWN, Boolean.FALSE)
                 .setValue(EAST, Boolean.FALSE)

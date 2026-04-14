@@ -38,7 +38,7 @@ public class WaxPipeCandle extends CandleBlock {
     );
     public WaxPipeCandle(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
     @Override
     public boolean isRandomlyTicking(BlockState pState) {

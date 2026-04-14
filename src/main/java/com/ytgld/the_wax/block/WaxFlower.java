@@ -16,7 +16,7 @@ import java.util.List;
 public class WaxFlower extends SporeBlossomBlock {
     public WaxFlower(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
     }
 
     @Override

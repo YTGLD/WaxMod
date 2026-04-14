@@ -34,7 +34,7 @@ public class SmallWaxGolden extends Block {
     );
     public SmallWaxGolden(Properties properties) {
         super(properties);
-        FluidRenderingRegistryImpl.setBlockTransparency(this, true);
+        
         this.registerDefaultState(
                 this.stateDefinition.any()
                         .setValue(IN_AIR, false)
