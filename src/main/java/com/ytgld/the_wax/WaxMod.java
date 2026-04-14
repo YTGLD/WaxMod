@@ -1,6 +1,7 @@
 package com.ytgld.the_wax;
 
 import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheFeatures;
 import com.ytgld.the_wax.items.init.ItemInit;
@@ -35,7 +36,7 @@ public class WaxMod implements ModInitializer {
 		TheFeatures.init();
 		TheConfiguredFeatures.init();
 		WaxRecipes.init();
-
+		ModPlacedFeatures.init();
 
 		LootTableEvents.MODIFY.register((ResourceKey<LootTable> var1, LootTable.Builder var2, LootTableSource var3, HolderLookup.Provider var4)->{
 			if (var1.equals(BuiltInLootTables.SNIFFER_DIGGING)){
@@ -53,6 +54,9 @@ public class WaxMod implements ModInitializer {
 			var1.add(BlockInit.NETHER_WAX, 6000);
 			var1.add(BlockInit.NETHER_PIPE, 2400);
 			var1.add(BlockInit.NETHER_PIPE_OTHER, 2400);
+
+			var1.add(BlockInit.MelonRoot_, 1200);
+			var1.add(BlockInit.MelonVine_, 1200);
 		});
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MOD_ID, "the_wax"), WaxTab.TEST_GROUP);
 	}

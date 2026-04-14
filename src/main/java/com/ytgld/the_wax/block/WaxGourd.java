@@ -1,6 +1,7 @@
 package com.ytgld.the_wax.block;
 
 import com.mojang.serialization.MapCodec;
+import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.items.init.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class WaxGourd  extends Block {
+public class WaxGourd  extends BlockBase {
     public static final MapCodec<WaxGourd> CODEC = simpleCodec(WaxGourd::new);
     public static final BooleanProperty NORTH = PipeBlock.NORTH;
     public static final BooleanProperty EAST = PipeBlock.EAST;

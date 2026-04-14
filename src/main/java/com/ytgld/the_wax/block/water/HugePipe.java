@@ -1,5 +1,6 @@
 package com.ytgld.the_wax.block.water;
 
+import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -8,7 +9,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.List;
 
-public class HugePipe extends Block {
+public class HugePipe extends BlockBase {
     public HugePipe(Properties properties) {
         super(properties);
     }

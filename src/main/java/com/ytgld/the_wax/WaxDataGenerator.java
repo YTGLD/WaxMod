@@ -1,5 +1,7 @@
 package com.ytgld.the_wax;
 
+import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
+import com.ytgld.the_wax.feature.gen.PlacedProvider;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheWaxConfiguredFeatureProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -13,9 +15,12 @@ public class WaxDataGenerator implements DataGeneratorEntrypoint {
 		fabricDataGenerator.createPack().addProvider(WaxTagGenerator::new);
 		fabricDataGenerator.createPack().addProvider(WaxTagGeneratorBlock::new);
 		fabricDataGenerator.createPack().addProvider(TheWaxConfiguredFeatureProvider::new);
+		fabricDataGenerator.createPack().addProvider(PlacedProvider::new);
 	}
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.CONFIGURED_FEATURE, TheConfiguredFeatures::bootstrap);
+		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
+
 }

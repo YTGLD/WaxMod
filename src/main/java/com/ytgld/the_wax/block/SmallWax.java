@@ -1,6 +1,7 @@
 package com.ytgld.the_wax.block;
 
 import com.mojang.serialization.MapCodec;
+import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.block.init.BlockInit;
 import com.ytgld.the_wax.items.init.ItemInit;
 import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
@@ -25,7 +26,7 @@ import org.jspecify.annotations.Nullable;
 
 import java.util.List;
 
-public class SmallWax extends Block {
+public class SmallWax extends BlockBase {
     public static final BooleanProperty IN_AIR = BooleanProperty.create("in_air");
     public static final BooleanProperty IS_GOLDEN = BooleanProperty.create("is_golden");
     public static final MapCodec<SmallWax> CODEC = simpleCodec(SmallWax::new);

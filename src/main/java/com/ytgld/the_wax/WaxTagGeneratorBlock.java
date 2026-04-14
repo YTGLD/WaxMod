@@ -33,6 +33,7 @@ public class WaxTagGeneratorBlock extends FabricTagsProvider.BlockTagsProvider {
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_other"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_planks"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_root"))
         ;
         getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_pipe_candle"))
@@ -48,6 +49,14 @@ public class WaxTagGeneratorBlock extends FabricTagsProvider.BlockTagsProvider {
         ;
         getOrCreateRawBuilder(BlockTags.WALLS)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
+        ;
+        getOrCreateRawBuilder(BlockTags.CAVE_VINES)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_vine"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_vine_plant"))
+        ;
+        getOrCreateRawBuilder(BlockTags.CLIMBABLE)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_vine"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_vine_plant"))
         ;
     }
 

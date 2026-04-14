@@ -2,6 +2,7 @@ package com.ytgld.the_wax.block.nether;
 
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.WaxGourd;
+import com.ytgld.the_wax.block.init.BlockBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -20,7 +21,7 @@ import org.jspecify.annotations.Nullable;
 
 import java.util.Map;
 
-public class NetherWaxBlock extends Block {
+public class NetherWaxBlock extends BlockBase {
     public static final MapCodec<WaxGourd> CODEC = simpleCodec(WaxGourd::new);
     public static final BooleanProperty NORTH = PipeBlock.NORTH;
     public static final BooleanProperty EAST = PipeBlock.EAST;

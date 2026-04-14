@@ -2,6 +2,10 @@ package com.ytgld.the_wax.block.init;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.block.*;
+import com.ytgld.the_wax.block.earth.MelonRoot;
+import com.ytgld.the_wax.block.earth.MelonRootFlower;
+import com.ytgld.the_wax.block.earth.MelonVine;
+import com.ytgld.the_wax.block.earth.MelonVinePlant;
 import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
 import net.minecraft.core.Registry;
@@ -14,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CaveVines;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -103,6 +108,20 @@ public class BlockInit {
     public static final Block NETHER_PIPE_PLANKS = register("nether_pipe_planks", NetherPipePlanks::new,
             BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD));
 
+    public static final Block MelonRoot_ = register("melon_root", MelonRoot::new,
+            BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD));
+    public static final Block MelonRootFlower_ = register("melon_root_flower", MelonRootFlower::new,
+            BlockBehaviour.Properties.of().strength(1f).lightLevel((state)->{
+                return 10;
+            }).sound(SoundType.WOOD));
+    public static final Block MelonVine_ = register("melon_vine", MelonVine::new,
+            BlockBehaviour.Properties.of().strength(0.2f).lightLevel((state)->{
+                return 8;
+            }).sound(SoundType.WOOD));
+    public static final Block MelonVinePlant_ = register("melon_vine_plant", MelonVinePlant::new,
+            BlockBehaviour.Properties.of().strength(0.2f).lightLevel((state)->{
+                return 8;
+            }).sound(SoundType.WOOD));
 
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {

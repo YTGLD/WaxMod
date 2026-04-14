@@ -46,6 +46,9 @@ public class WaxTab {
                 entries.accept(ItemInit.WaxBowl_);
                 entries.accept(ItemInit.WaxBowl_sus);
 
+                entries.accept(BlockInit.MelonRoot_);
+                entries.accept(BlockInit.MelonRootFlower_);
+                entries.accept(BlockInit.MelonVine_);
 
             })
             .build();

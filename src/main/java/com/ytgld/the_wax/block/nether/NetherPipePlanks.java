@@ -1,5 +1,6 @@
 package com.ytgld.the_wax.block.nether;
 
+import com.ytgld.the_wax.block.init.BlockBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -12,7 +13,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.List;
 
-public class NetherPipePlanks extends Block {
+public class NetherPipePlanks extends BlockBase {
 
     public static final BooleanProperty A = BooleanProperty.create("a");
     public static final BooleanProperty B = BooleanProperty.create("b");

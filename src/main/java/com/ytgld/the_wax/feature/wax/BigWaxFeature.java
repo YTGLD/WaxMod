@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.feature;
+package com.ytgld.the_wax.feature.wax;
 
 import com.mojang.serialization.Codec;
 import com.ytgld.the_wax.block.WaxGourd;

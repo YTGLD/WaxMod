@@ -25,6 +25,7 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
     protected void addTags(HolderLookup.Provider provider) {
         getOrCreateRawBuilder(ItemTags.PLANKS)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_planks"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_root"))
 
         ;
         getOrCreateRawBuilder(NETHER_PIPE)
@@ -38,6 +39,7 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"pipe_wall"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe_other"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_root"))
 
         ;
         getOrCreateRawBuilder(WAX)
