@@ -1,6 +1,7 @@
 package com.ytgld.the_wax;
 
 import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.init.WaxBlockEntityType;
 import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheFeatures;
@@ -37,6 +38,7 @@ public class WaxMod implements ModInitializer {
 		TheConfiguredFeatures.init();
 		WaxRecipes.init();
 		ModPlacedFeatures.init();
+		WaxBlockEntityType.init();
 
 		LootTableEvents.MODIFY.register((ResourceKey<LootTable> var1, LootTable.Builder var2, LootTableSource var3, HolderLookup.Provider var4)->{
 			if (var1.equals(BuiltInLootTables.SNIFFER_DIGGING)){

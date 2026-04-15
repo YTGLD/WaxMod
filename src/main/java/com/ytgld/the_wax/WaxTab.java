@@ -2,7 +2,6 @@ package com.ytgld.the_wax;
 
 import com.ytgld.the_wax.block.init.BlockInit;
 import com.ytgld.the_wax.items.init.ItemInit;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

@@ -1,6 +1,5 @@
 package com.ytgld.the_wax.block;
 
-import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;

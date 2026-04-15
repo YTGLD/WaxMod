@@ -3,7 +3,6 @@ package com.ytgld.the_wax.block.water;
 import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 

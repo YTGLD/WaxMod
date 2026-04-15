@@ -3,13 +3,10 @@ package com.ytgld.the_wax.block.earth;
 import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -31,11 +28,8 @@ public class MelonRootFlower extends BlockBase {
         return SHAPE;
     }
     @Override
-    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
-        return List.of(new ItemStack(BlockInit.WAX_BASE));
-    }
-    @Override
     public boolean canSurvive(final BlockState state, final LevelReader level, final BlockPos pos) {
-        return level.getBlockState(pos.below()).isSolid();
+        return !level.isEmptyBlock(pos.below());
     }
+
 }

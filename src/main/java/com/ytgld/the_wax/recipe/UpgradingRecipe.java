@@ -1,7 +1,6 @@
 package com.ytgld.the_wax.recipe;
 
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.ytgld.the_wax.items.init.ItemInit;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
@@ -10,10 +9,11 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.CraftingInput;
+import net.minecraft.world.item.crafting.CustomRecipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SuspiciousEffectHolder;
 

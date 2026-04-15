@@ -1,7 +1,6 @@
 package com.ytgld.the_wax.block.water;
 
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
-import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -74,4 +73,10 @@ public class WaterWaxBase extends MushroomBlock implements BonemealableBlock {
     protected void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
 
     }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
+        return true;
+    }
+
 }

@@ -1,8 +1,5 @@
 package com.ytgld.the_wax.recipe;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeInput;
-
 public class UpgradingRecipeInput {
    /*
 

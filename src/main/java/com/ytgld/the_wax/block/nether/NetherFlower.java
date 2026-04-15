@@ -1,10 +1,8 @@
 package com.ytgld.the_wax.block.nether;
 
-import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;

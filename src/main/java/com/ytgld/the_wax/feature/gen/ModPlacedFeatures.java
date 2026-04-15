@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import vectorwing.farmersdelight.common.registry.ModBiomeModifiers;
 
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class ModPlacedFeatures {
     }
     public static void init() {
         BiomeModifications.addFeature(
-                BiomeSelectors.foundInOverworld(),
+                BiomeSelectors.tag(BiomeTags.HAS_MINESHAFT),
                 GenerationStep.Decoration.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.ROOT);
     }

@@ -4,6 +4,7 @@ import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
 import com.ytgld.the_wax.feature.gen.PlacedProvider;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheWaxConfiguredFeatureProvider;
+import com.ytgld.the_wax.loot.WaxLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
@@ -16,6 +17,7 @@ public class WaxDataGenerator implements DataGeneratorEntrypoint {
 		fabricDataGenerator.createPack().addProvider(WaxTagGeneratorBlock::new);
 		fabricDataGenerator.createPack().addProvider(TheWaxConfiguredFeatureProvider::new);
 		fabricDataGenerator.createPack().addProvider(PlacedProvider::new);
+		fabricDataGenerator.createPack().addProvider(WaxLootTableProvider::new);
 	}
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {

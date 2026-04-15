@@ -2,9 +2,9 @@ package com.ytgld.the_wax.feature.gen;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.feature.earth.UngroudRootFeatureConfig;
-import com.ytgld.the_wax.feature.wax.WaxFeatureConfig;
 import com.ytgld.the_wax.feature.nether.NetherWaxFeatureConfig;
 import com.ytgld.the_wax.feature.water.WaterFeatureConfig;
+import com.ytgld.the_wax.feature.wax.WaxFeatureConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;

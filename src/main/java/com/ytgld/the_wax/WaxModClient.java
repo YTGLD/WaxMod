@@ -3,7 +3,6 @@ package com.ytgld.the_wax;
 import com.ytgld.the_wax.block.init.BlockInit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
-import net.minecraft.world.level.block.Block;
 
 public class WaxModClient implements ClientModInitializer {
     @Override

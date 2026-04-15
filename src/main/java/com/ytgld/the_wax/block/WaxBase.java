@@ -2,12 +2,12 @@ package com.ytgld.the_wax.block;
 
 import com.ytgld.the_wax.block.init.BlockInit;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
-import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.MushroomBlock;
@@ -28,10 +28,16 @@ public class WaxBase extends MushroomBlock implements BonemealableBlock {
     }
     @Override
     protected boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
-        return levelReader.getBlockState(blockPos.above()).is(BlockTags.BASE_STONE_OVERWORLD)||levelReader.getBlockState(blockPos.above()).is(BlockTags.DIRT);
+        return levelReader.getBlockState(blockPos.above()).is(BlockTags.BASE_STONE_OVERWORLD)
+                ||levelReader.getBlockState(blockPos.above()).isSolidRender();
     }
     @Override
     protected void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
-
     }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
+        return true;
+    }
+
 }

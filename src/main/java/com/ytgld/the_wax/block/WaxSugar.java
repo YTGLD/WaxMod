@@ -2,7 +2,6 @@ package com.ytgld.the_wax.block;
 
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.init.BlockInit;
-import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
