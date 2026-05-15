@@ -2,12 +2,11 @@ package com.ytgld.the_wax.block.init;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.block.*;
-import com.ytgld.the_wax.block.earth.MelonRoot;
-import com.ytgld.the_wax.block.earth.MelonRootFlower;
-import com.ytgld.the_wax.block.earth.MelonVine;
-import com.ytgld.the_wax.block.earth.MelonVinePlant;
+import com.ytgld.the_wax.block.earth.*;
 import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
+import com.ytgld.the_wax.block.wax_melon.WaxMelonStem;
+import com.ytgld.the_wax.block.wax_melon.WaxMelonStemPlack;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -120,7 +119,18 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(0.2f).lightLevel((state)->{
                 return 8;
             }).sound(SoundType.WOOD));
+    public static final Block GiantRhizome_ = register("giant_rhizome", GiantRhizome::new,
+            BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
 
+
+    /**
+     * 2026-5-15
+     */
+
+    public static final Block WaxMelonStem_ = register("wax_melon_stem", WaxMelonStem::new,
+            BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
+    public static final Block WaxMelonStemPlack_ = register("wax_melon_stem_plack", WaxMelonStemPlack::new,
+            BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD));
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

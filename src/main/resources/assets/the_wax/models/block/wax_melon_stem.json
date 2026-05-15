@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "the_wax:block/wax_melon_stem_top",
+    "side": "the_wax:block/wax_melon_stem"
+  }
+}

@@ -26,6 +26,9 @@
   "block.the_wax.melon_root_flower": "Root flowers of winter melon",
   "block.the_wax.melon_vine": "Earth winter melon vine",
   "block.the_wax.melon_vine_plant": "Earth winter melon vine",
+  "block.the_wax.giant_rhizome": "Giant soil winter melon root",
+  "block.the_wax.wax_melon_stem": "Wax melon stem",
+  "block.the_wax.wax_melon_stem_plack": "Wax melon board",
 
 
 
@@ -52,5 +55,8 @@
   "item.the_wax.melon_root": "Soil winter melon root",
   "item.the_wax.melon_root_flower": "Root flowers of winter melon",
   "item.the_wax.melon_vine": "Earth winter melon vine",
-  "item.the_wax.melon_vine_plant": "Earth winter melon vine"
+  "item.the_wax.melon_vine_plant": "Earth winter melon vine",
+  "item.the_wax.giant_rhizome": "Giant soil winter melon root",
+  "item.the_wax.wax_melon_stem_plack": "Wax melon board",
+  "item.the_wax.wax_melon_stem": "Wax melon stem"
 }

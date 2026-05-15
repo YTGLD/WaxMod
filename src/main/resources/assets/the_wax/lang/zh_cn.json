@@ -26,6 +26,9 @@
   "block.the_wax.melon_root_flower": "土冬瓜根花",
   "block.the_wax.melon_vine": "土冬瓜藤",
   "block.the_wax.melon_vine_plant": "土冬瓜藤",
+  "block.the_wax.giant_rhizome": "巨型土冬瓜根",
+  "block.the_wax.wax_melon_stem": "蜡瓜茎",
+  "block.the_wax.wax_melon_stem_plack": "蜡瓜木板",
 
 
 
@@ -54,5 +57,8 @@
   "item.the_wax.melon_root": "土冬瓜根",
   "item.the_wax.melon_root_flower": "土冬瓜根花",
   "item.the_wax.melon_vine": "土冬瓜藤",
-  "item.the_wax.melon_vine_plant": "土冬瓜藤"
+  "item.the_wax.melon_vine_plant": "土冬瓜藤",
+  "item.the_wax.giant_rhizome": "巨型土冬瓜根",
+  "item.the_wax.wax_melon_stem": "蜡瓜茎",
+  "item.the_wax.wax_melon_stem_plack": "蜡瓜木板"
 }

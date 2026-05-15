@@ -1,6 +1,7 @@
 package com.ytgld.the_wax.block.init;
 
 import com.ytgld.the_wax.WaxMod;
+import com.ytgld.the_wax.block.earth.GiantRhizomeBlockEntity;
 import com.ytgld.the_wax.block.earth.MelonRootBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
@@ -13,6 +14,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 public class WaxBlockEntityType {
     public static final BlockEntityType<MelonRootBlockEntity> MelonRootBlockEntity_ =
             register("melon_root_block_entity", MelonRootBlockEntity::new, BlockInit.MelonRoot_);
+    public static final BlockEntityType<GiantRhizomeBlockEntity> GiantRhizomeBlockEntity_ =
+            register("giant_rhizome_block_entity", GiantRhizomeBlockEntity::new, BlockInit.GiantRhizome_);
 
 
     private static <T extends BlockEntity> BlockEntityType<T> register(

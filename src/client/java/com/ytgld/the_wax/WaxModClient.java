@@ -1,12 +1,17 @@
 package com.ytgld.the_wax;
 
+import com.ytgld.the_wax.render.GiantRhizomeRenderer;
 import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.init.WaxBlockEntityType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRenderingRegistryImpl;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
 public class WaxModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        BlockEntityRenderers.register(WaxBlockEntityType.GiantRhizomeBlockEntity_, GiantRhizomeRenderer::new);
+
         FluidRenderingRegistryImpl.setBlockTransparency(BlockInit.NETHER_FLOWER, true);
         FluidRenderingRegistryImpl.setBlockTransparency(BlockInit.NETHER_WAX_BASE, true);
         FluidRenderingRegistryImpl.setBlockTransparency(BlockInit.WATER_WAX_BASE, true);
