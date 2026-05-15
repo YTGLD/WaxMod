@@ -5,6 +5,7 @@ import com.ytgld.the_wax.feature.earth.UngroudRootFeatureConfig;
 import com.ytgld.the_wax.feature.nether.NetherWaxFeatureConfig;
 import com.ytgld.the_wax.feature.water.WaterFeatureConfig;
 import com.ytgld.the_wax.feature.wax.WaxFeatureConfig;
+import com.ytgld.the_wax.feature.wax_melon.WaxMelonFeatureConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -22,6 +23,8 @@ public class TheConfiguredFeatures {
             Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"huge_nether_wax"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> UngroudRootFeatureConfig_ = ResourceKey.create(Registries.CONFIGURED_FEATURE,
             Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"root"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WaxMelonFeatureConfig_ = ResourceKey.create(Registries.CONFIGURED_FEATURE,
+            Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon"));
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> featureRegisterable) {
         FeatureUtils.register(featureRegisterable, BIG_WAX, TheFeatures.WAX_FEATURE_CONFIG_FEATURE,
@@ -35,6 +38,9 @@ public class TheConfiguredFeatures {
                 ));
         FeatureUtils.register(featureRegisterable, UngroudRootFeatureConfig_, TheFeatures.UngroudRootFeature_,
                 new UngroudRootFeatureConfig(10,Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"root")
+                ));
+        FeatureUtils.register(featureRegisterable, WaxMelonFeatureConfig_, TheFeatures.WaxMelonFeature_,
+                new WaxMelonFeatureConfig(10,Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon")
                 ));
     }
 

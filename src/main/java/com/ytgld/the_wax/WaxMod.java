@@ -50,6 +50,10 @@ public class WaxMod implements ModInitializer {
 		FuelValueEvents.BUILD.register((FuelValues.Builder var1, FuelValueEvents.Context var2) -> {
 			var1.add(BlockInit.Wax, 500);
 			var1.add(BlockInit.WAX_PINE, 600);
+			var1.add(BlockInit.WaxMelonStemSeed_, 600);
+			var1.add(BlockInit.WaxMelonStemPlack_, 600);
+			var1.add(BlockInit.WaxMelonStem_, 600);
+			var1.add(BlockInit.BeeswaxMelon_, 600);
 			var1.add(BlockInit.NETHER_WAX_BASE, 300);
 			var1.add(BlockInit.HUGE_PIPE, 600);
 			var1.add(BlockInit.PIPE_WALL, 100);

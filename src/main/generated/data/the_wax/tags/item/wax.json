@@ -2,6 +2,8 @@
   "values": [
     "the_wax:wax",
     "the_wax:water_wax",
-    "the_wax:nether_wax"
+    "the_wax:nether_wax",
+    "the_wax:beeswax_melon",
+    "the_wax:wax_melon_wax"
   ]
 }

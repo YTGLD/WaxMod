@@ -1,5 +1,6 @@
 {
   "multipart": [
+
     {
       "apply": {
         "model": "the_wax:block/wax_melon_stem_down"
@@ -35,6 +36,16 @@
         "d": "true"
       }
     },
+
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_not_face"
+      },
+      "when": {
+        "face": "true"
+      }
+    },
+
     {
       "apply": {
         "model": "the_wax:block/wax_melon_stem_horizontal",
@@ -42,7 +53,8 @@
         "y": 90
       },
       "when": {
-        "axis": "x"
+        "axis": "x",
+        "face": "false"
       }
     },
     {
@@ -50,7 +62,8 @@
         "model": "the_wax:block/wax_melon_stem"
       },
       "when": {
-        "axis": "y"
+        "axis": "y",
+        "face": "false"
       }
     },
     {
@@ -59,7 +72,8 @@
         "x": 90
       },
       "when": {
-        "axis": "z"
+        "axis": "z",
+        "face": "false"
       }
     }
   ]

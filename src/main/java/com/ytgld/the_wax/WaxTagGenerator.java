@@ -46,6 +46,8 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"beeswax_melon"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon_wax"))
 
         ;
     }

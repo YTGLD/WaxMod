@@ -69,6 +69,17 @@
             }
           ],
           "name": "minecraft:iron_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "the_wax:wax_melon_ste_seed"
         }
       ],
       "rolls": 2.0

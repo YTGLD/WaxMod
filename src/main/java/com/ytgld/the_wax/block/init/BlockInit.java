@@ -5,8 +5,10 @@ import com.ytgld.the_wax.block.*;
 import com.ytgld.the_wax.block.earth.*;
 import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
+import com.ytgld.the_wax.block.wax_melon.BeeswaxMelon;
 import com.ytgld.the_wax.block.wax_melon.WaxMelonStem;
 import com.ytgld.the_wax.block.wax_melon.WaxMelonStemPlack;
+import com.ytgld.the_wax.block.wax_melon.WaxMelonStemSeed;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -131,6 +133,10 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
     public static final Block WaxMelonStemPlack_ = register("wax_melon_stem_plack", WaxMelonStemPlack::new,
             BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD));
+    public static final Block BeeswaxMelon_ = register("beeswax_melon", BeeswaxMelon::new,
+            BlockBehaviour.Properties.of().strength(1f).lightLevel((state)->15).sound(SoundType.WOOD));
+    public static final Block WaxMelonStemSeed_ = register("wax_melon_ste_seed", WaxMelonStemSeed::new,
+            BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.WOOD));
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

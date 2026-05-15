@@ -2,6 +2,7 @@ package com.ytgld.the_wax.feature.earth;
 
 import com.mojang.serialization.Codec;
 import com.ytgld.the_wax.block.earth.MelonRootBlockEntity;
+import com.ytgld.the_wax.block.earth.MelonVinePlant;
 import com.ytgld.the_wax.block.init.BlockInit;
 import com.ytgld.the_wax.loot.WaxLootTables;
 import net.minecraft.core.BlockPos;
@@ -10,6 +11,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
@@ -44,7 +46,13 @@ public class UngroudRootFeature extends Feature<UngroudRootFeatureConfig> {
                 int vineLength = 3 + random.nextInt(5);
                 for (int j = 0; j < vineLength; j++) {
                     if (world.isEmptyBlock(vinePos)) {
-                        world.setBlock(vinePos, BlockInit.MelonVinePlant_.defaultBlockState(), 2);
+                        BlockState state = BlockInit.MelonVinePlant_.defaultBlockState();
+                        if (Mth.nextInt(random, 1, 4) <= 1) {
+                            state = state.setValue(MelonVinePlant.BERRIES,true);
+                        }
+                        world.setBlock(vinePos, state, 2);
+
+
                         vinePos = vinePos.below();
                     } else {
                         break;
@@ -52,7 +60,11 @@ public class UngroudRootFeature extends Feature<UngroudRootFeatureConfig> {
                 }
 
                 if (world.isEmptyBlock(vinePos)) {
-                    world.setBlock(vinePos, BlockInit.MelonVine_.defaultBlockState(), 2);
+                    BlockState state = BlockInit.MelonVine_.defaultBlockState();
+                    if (Mth.nextInt(random, 1, 4) <= 1) {
+                        state = state.setValue(MelonVinePlant.BERRIES,true);
+                    }
+                    world.setBlock(vinePos, state, 2);
                 }
                 BlockPos pos = vinePos.below();
                 if (world.isEmptyBlock(pos)) {
