@@ -32,6 +32,9 @@
   "block.the_wax.beeswax_melon": "Sweet wax melon",
   "block.the_wax.wax_melon_wax": "Melon wax",
   "block.the_wax.wax_melon_ste_seed": "Wax melon seedlings",
+  "block.the_wax.wax_melon_candle": "Melon wax candles",
+  "block.the_wax.wax_melon_wax_slab": "Half a brick of melon wax",
+  "block.the_wax.wax_melon_wax_oil": "Wax melon oil",
 
 
 
@@ -64,5 +67,8 @@
   "item.the_wax.wax_melon_stem": "Wax melon stem",
   "item.the_wax.beeswax_melon": "Sweet wax melon",
   "item.the_wax.wax_melon_wax": "Melon wax",
-  "item.the_wax.wax_melon_ste_seed": "Wax melon seedlings"
+  "item.the_wax.wax_melon_ste_seed": "Wax melon seedlings",
+  "item.the_wax.wax_melon_candle": "Melon wax candles",
+  "item.the_wax.wax_melon_wax_slab": "Half a brick of melon wax",
+  "item.the_wax.wax_melon_wax_oil": "Wax melon oil"
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "the_wax:block/wax_melon_wax_slab"
+    },
+    "type=double": {
+      "model": "the_wax:block/wax_melon_wax_slab_full"
+    },
+    "type=top": {
+      "model": "the_wax:block/wax_melon_wax_slab_top"
+    }
+  }
+}

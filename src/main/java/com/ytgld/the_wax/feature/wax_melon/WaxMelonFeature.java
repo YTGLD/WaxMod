@@ -38,7 +38,8 @@ public class WaxMelonFeature extends Feature<WaxMelonFeatureConfig> {
                 stateRoot = stateRoot.trySetValue(WaxMelonStem.A,offset * testPos.hashCode() %5==0)
                         .trySetValue(WaxMelonStem.B,offset * testPos.hashCode() %6==0)
                         .trySetValue(WaxMelonStem.C,offset * testPos.hashCode() %7==0)
-                        .trySetValue(WaxMelonStem.D,offset * testPos.hashCode() %8==0);
+                        .trySetValue(WaxMelonStem.D,offset * testPos.hashCode() %8==0)
+                        .setValue(WaxMelonStem.AXIS, Direction.Axis.Y);
 
                 world.setBlock(nowPos.east(), stateRoot,3);
                 world.setBlock(nowPos.north(),stateRoot,3);

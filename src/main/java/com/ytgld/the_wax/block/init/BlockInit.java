@@ -5,10 +5,10 @@ import com.ytgld.the_wax.block.*;
 import com.ytgld.the_wax.block.earth.*;
 import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
-import com.ytgld.the_wax.block.wax_melon.BeeswaxMelon;
-import com.ytgld.the_wax.block.wax_melon.WaxMelonStem;
-import com.ytgld.the_wax.block.wax_melon.WaxMelonStemPlack;
-import com.ytgld.the_wax.block.wax_melon.WaxMelonStemSeed;
+import com.ytgld.the_wax.block.wax_melon.*;
+import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandle;
+import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandleHalf;
+import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandleOil;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -123,12 +123,9 @@ public class BlockInit {
             }).sound(SoundType.WOOD));
     public static final Block GiantRhizome_ = register("giant_rhizome", GiantRhizome::new,
             BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
-
-
     /**
      * 2026-5-15
      */
-
     public static final Block WaxMelonStem_ = register("wax_melon_stem", WaxMelonStem::new,
             BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
     public static final Block WaxMelonStemPlack_ = register("wax_melon_stem_plack", WaxMelonStemPlack::new,
@@ -137,6 +134,20 @@ public class BlockInit {
             BlockBehaviour.Properties.of().strength(1f).lightLevel((state)->15).sound(SoundType.WOOD));
     public static final Block WaxMelonStemSeed_ = register("wax_melon_ste_seed", WaxMelonStemSeed::new,
             BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.WOOD));
+    /**
+     * 2026-5-16
+     */
+    public static final Block WaxMelonCandle_ = register("wax_melon_candle", WaxMelonCandle::new,
+            BlockBehaviour.Properties.of()
+                    .lightLevel(WaxMelonCandle.LIGHT_EMISSION)
+                    .strength(0.8f)
+                    .randomTicks()
+                    .sound(SoundType.CANDLE));
+    public static final Block WaxMelonCandleHalf_ = register("wax_melon_wax_slab", WaxMelonCandleHalf::new,
+            BlockBehaviour.Properties.of().strength(0.4f).sound(SoundType.CANDLE));
+    public static final Block WaxMelonCandleOil_ = register("wax_melon_wax_oil", WaxMelonCandleOil::new,
+            BlockBehaviour.Properties.of().friction(0.9f).strength(0.2f).sound(SoundType.CANDLE));
+
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

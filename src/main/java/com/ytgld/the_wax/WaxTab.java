@@ -56,6 +56,9 @@ public class WaxTab {
                 entries.accept(BlockInit.BeeswaxMelon_);
                 entries.accept(ItemInit.WaxMelonWax_);
                 entries.accept(BlockInit.WaxMelonStemSeed_);
+                entries.accept(BlockInit.WaxMelonCandle_);
+                entries.accept(BlockInit.WaxMelonCandleHalf_);
+                entries.accept(BlockInit.WaxMelonCandleOil_);
 
             })
             .build();

@@ -1,0 +1,24 @@
+
+{
+  "variants": {
+    "lit=true,is_long=false": {
+      "model": "the_wax:block/wax_melon_candle_fire"
+    },
+    "lit=false,is_long=false": {
+      "model": "the_wax:block/wax_melon_candle"
+    },
+    "is_long=true,lit=true": {
+      "model": "the_wax:block/wax_melon_candle_long_fire"
+    },
+    "is_long=true,lit=false": {
+      "model": "the_wax:block/wax_melon_candle_long"
+    },
+
+    "is_long=true,lit=true,oil=true": {
+      "model": "the_wax:block/wax_melon_candle_long_oil_fire"
+    },
+    "is_long=true,lit=false,oil=true": {
+      "model": "the_wax:block/wax_melon_candle_long_oil_not_fire"
+    }
+  }
+}
