@@ -1,0 +1,51 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "the_wax:block/wax_melon_candle_not_fire",
+		"2": "the_wax:block/wax_melon_candle_down",
+		"3": "the_wax:block/wax_melon_candle_top",
+		"4": "the_wax:block/wax_melon_candle",
+		"particle": "the_wax:block/wax_melon_candle_fire"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"from": [14, 16, 4],
+			"to": [18, 25, 4],
+			"rotation": {"angle": -45, "axis": "y", "origin": [7, 0, -3]},
+			"faces": {
+				"north": {"uv": [6, 7, 10, 16], "texture": "#1"},
+				"east": {"uv": [2, 0, 2, 9], "texture": "#missing"},
+				"south": {"uv": [6, 7, 10, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 9], "texture": "#missing"},
+				"up": {"uv": [0, 0, 4, 0], "texture": "#missing"},
+				"down": {"uv": [0, 2, 4, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [7, 16, 9],
+			"to": [11, 25, 9],
+			"rotation": {"angle": 45, "axis": "y", "origin": [7, 16, 9]},
+			"faces": {
+				"north": {"uv": [6, 7, 10, 16], "texture": "#1"},
+				"east": {"uv": [2, 0, 2, 9], "texture": "#missing"},
+				"south": {"uv": [6, 7, 10, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 9], "texture": "#missing"},
+				"up": {"uv": [0, 0, 4, 0], "texture": "#missing"},
+				"down": {"uv": [0, 2, 4, 2], "texture": "#missing"}
+			}
+		}
+	]
+}
