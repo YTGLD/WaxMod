@@ -45,6 +45,7 @@ public class WaxMelonFeature extends Feature<WaxMelonFeatureConfig> {
                 world.setBlock(nowPos.north(),stateRoot,3);
                 world.setBlock(nowPos.west(), stateRoot,3);
                 world.setBlock(nowPos.south(),stateRoot,3);
+                world.setBlock(nowPos,stateRoot,3);
             }else if (i == waterHeight - 1) {
                 addStem(nowPos, world);
             }else {
@@ -57,39 +58,29 @@ public class WaxMelonFeature extends Feature<WaxMelonFeatureConfig> {
         return true;
     }
     public void addAir(BlockPos testPos,WorldGenLevel world){
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
-                    BlockPos pos = testPos.offset(i - 1, j - 1, k - 1);
-                    if (world.getBlockState(pos).is(BlockInit.WaxMelonStem_)) {
-                        world.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-                    }
-                }
-            }
-        }
         world.setBlock(testPos.offset(0,0,0), BlockInit.BeeswaxMelon_.defaultBlockState(), 3);
         world.setBlock(testPos.offset(0,1,0), BlockInit.MelonVine_.defaultBlockState(), 3);
     }
     public void addStem(BlockPos testPos, WorldGenLevel world) {
-        BlockState state = BlockInit.WaxMelonStem_.defaultBlockState();
-        state = state.setValue(WaxMelonStem.notFace,true);
-        for (int i = -2; i <= 2; i++) {
-            for (int j = -2; j <= 2; j++) {
-                BlockPos posXY = testPos.offset(i, j, 0);
-                if (world.getBlockState(posXY).is(Blocks.AIR)) {
-                    world.setBlock(posXY,state , 3);
-                }
-
-                BlockPos posXZ = testPos.offset(i, 0, j);
-                if (world.getBlockState(posXZ).is(Blocks.AIR)) {
-                    world.setBlock(posXZ, state, 3);
-                }
-                BlockPos posYZ = testPos.offset(0, i, j);
-                if (world.getBlockState(posYZ).is(Blocks.AIR)) {
-                    world.setBlock(posYZ, state, 3);
-                }
-            }
+        addBlock(testPos,world, Direction.Axis.Y);
+        int xz = 2;
+        int y = 5;
+        for (int i = 0; i < xz; i++) {
+            addBlock(testPos.offset(0,0,i),world, Direction.Axis.Z);
         }
-        addAir(testPos, world);
+        for (int i = 0; i < y; i++) {
+            addBlock(testPos.offset(0,i,xz),world, Direction.Axis.Y);
+        }
+        for (int i = 0; i < xz; i++) {
+            addBlock(testPos.offset(0,y-1,i),world, Direction.Axis.Z);
+        }
+        addAir(testPos.offset(0,2,0), world);
+    }
+    public void addBlock(BlockPos testPos, WorldGenLevel world, Direction.Axis axis){
+        BlockState state = BlockInit.WaxMelonStem_.defaultBlockState();
+        state = state.setValue(WaxMelonStem.AXIS, axis);
+        if (world.getBlockState(testPos).is(Blocks.AIR)) {
+            world.setBlock(testPos,state , 3);
+        }
     }
 }
