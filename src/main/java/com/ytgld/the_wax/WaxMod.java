@@ -11,6 +11,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.loot.v3.LootTableSource;
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.fabric.impl.content.registry.StrippableBlockRegistryImpl;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -47,6 +49,9 @@ public class WaxMod implements ModInitializer {
 								.when(LootItemRandomChanceCondition.randomChance(0.25f))));
 			}
 		});
+
+		StrippableBlockRegistry.register(BlockInit.WaxMelonStem_,BlockInit.StrippedWaxMelonStem_);
+
 		FuelValueEvents.BUILD.register((FuelValues.Builder var1, FuelValueEvents.Context var2) -> {
 			var1.add(BlockInit.Wax, 500);
 			var1.add(BlockInit.WAX_PINE, 600);

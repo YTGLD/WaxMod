@@ -59,6 +59,7 @@ public class WaxTab {
                 entries.accept(BlockInit.WaxMelonCandle_);
                 entries.accept(BlockInit.WaxMelonCandleHalf_);
                 entries.accept(BlockInit.WaxMelonCandleOil_);
+                entries.accept(BlockInit.StrippedWaxMelonStem_);
 
             })
             .build();

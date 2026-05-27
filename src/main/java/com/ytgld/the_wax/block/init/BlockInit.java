@@ -148,6 +148,11 @@ public class BlockInit {
     public static final Block WaxMelonCandleOil_ = register("wax_melon_wax_oil", WaxMelonCandleOil::new,
             BlockBehaviour.Properties.of().friction(0.9f).strength(0.2f).sound(SoundType.CANDLE));
 
+    /**
+     * 2026-5-27
+     */
+    public static final Block StrippedWaxMelonStem_ = register("stripped_wax_melon_stem", StrippedWaxMelonStem::new,
+            BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

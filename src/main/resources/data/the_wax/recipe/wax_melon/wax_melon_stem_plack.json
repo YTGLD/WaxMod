@@ -3,7 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    "the_wax:wax_melon_stem"
+    "#the_wax:wax_melon_stem"
   ],
   "result": {
     "count": 4,

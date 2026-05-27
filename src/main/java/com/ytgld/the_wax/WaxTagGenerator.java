@@ -16,6 +16,7 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
     public static final TagKey<Item> WAX = bind("wax");
     public static final TagKey<Item> PIPE = bind("pipe");
     public static final TagKey<Item> NETHER_PIPE = bind("nether_pipe");
+    public static final TagKey<Item> WaxMelonStemTag = bind("wax_melon_stem");
 
     public WaxTagGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture, null);
@@ -47,6 +48,11 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"water_wax"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_wax"))
+
+        ;
+        getOrCreateRawBuilder(WaxMelonStemTag)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon_stem"))
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"stripped_wax_melon_stem"))
 
         ;
     }

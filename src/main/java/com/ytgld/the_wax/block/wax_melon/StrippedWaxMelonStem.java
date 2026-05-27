@@ -1,0 +1,18 @@
+package com.ytgld.the_wax.block.wax_melon;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.LootParams;
+
+import java.util.List;
+
+public class StrippedWaxMelonStem extends RotatedPillarBlock {
+    public StrippedWaxMelonStem(Properties properties) {
+        super(properties);
+    }
+    @Override
+    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        return List.of(new ItemStack(this.asItem()));
+    }
+}
