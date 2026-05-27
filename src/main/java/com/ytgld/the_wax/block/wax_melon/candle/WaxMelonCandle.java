@@ -11,6 +11,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -138,18 +139,22 @@ public class WaxMelonCandle extends BlockBase {
     protected void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         if (blockState.getValue(LIT)&&blockState.getValue(oil)) {
             Vec3 playerPos = blockPos.getCenter();
-            int range = 16;
-            List<Player> list = serverLevel.getEntitiesOfClass(Player.class, new AABB(playerPos.x - range, playerPos.y - range, playerPos.z - range, playerPos.x + range, playerPos.y + range, playerPos.z + range));
-            for (Player player : list) {
-                player.getFoodData().eat(1,0.5f);
-            }
-            while (serverLevel.getBlockState(blockPos.below()).is(this)){
+            int range = 4;
+            Vec3 min = playerPos.subtract(range, range, range);
+            Vec3 max = playerPos.add(range, range, range);
+            AABB box = new AABB(min, max);
+            List<Player> players = serverLevel.getEntitiesOfClass(Player.class, box, LivingEntity::isAlive);
+            players.forEach(player -> player.getFoodData().eat(1, 0.5f));
+            int maxDepth = 4;
+            int depth = 0;
+            while (depth < maxDepth && serverLevel.getBlockState(blockPos.below()).is(this)) {
                 blockPos = blockPos.below();
+                depth++;
             }
 
             BlockPos pos = blockPos.below().offset(Mth.nextInt(randomSource,-1,1),0,Mth.nextInt(randomSource,-1,1));
             BlockPos blockPoss = blockPos.offset(Mth.nextInt(randomSource,-1,1),0,Mth.nextInt(randomSource,-1,1));
-            if (serverLevel.getBlockState(pos).isSolidRender() && !serverLevel.getBlockState(blockPoss).is(this)) {
+            if (serverLevel.getBlockState(pos).isSolidRender() && !serverLevel.getBlockState(blockPoss).is(this) && serverLevel.getBlockState(blockPoss).is(Blocks.AIR)) {
                 if (serverLevel.getBlockState(blockPoss).is(BlockInit.WaxMelonCandleOil_)) {
                     if (serverLevel.getBlockState(blockPoss).getValue(WaxMelonCandleOil.LAYERS) < 8) {
                         serverLevel.setBlock(blockPoss,
