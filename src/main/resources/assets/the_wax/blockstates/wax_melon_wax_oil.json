@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "the_wax:block/wax_melon_wax_oil2"
+    },
+    "layers=2": {
+      "model": "the_wax:block/wax_melon_wax_oil4"
+    },
+    "layers=3": {
+      "model": "the_wax:block/wax_melon_wax_oil6"
+    },
+    "layers=4": {
+      "model": "the_wax:block/wax_melon_wax_oil8"
+    },
+    "layers=5": {
+      "model": "the_wax:block/wax_melon_wax_oil10"
+    },
+    "layers=6": {
+      "model": "the_wax:block/wax_melon_wax_oil12"
+    },
+    "layers=7": {
+      "model": "the_wax:block/wax_melon_wax_oil14"
+    },
+    "layers=8": {
+      "model": "the_wax:block/wax_melon_wax_oil"
+    }
+  }
+}

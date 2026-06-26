@@ -1,0 +1,80 @@
+{
+  "multipart": [
+
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_down"
+      },
+      "when": {
+        "a": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_down",
+        "y": 90
+      },
+      "when": {
+        "b": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_down",
+        "y": 180
+      },
+      "when": {
+        "c": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_down",
+        "y": 270
+      },
+      "when": {
+        "d": "true"
+      }
+    },
+
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_not_face"
+      },
+      "when": {
+        "face": "true"
+      }
+    },
+
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_horizontal",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x",
+        "face": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem"
+      },
+      "when": {
+        "axis": "y",
+        "face": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/wax_melon_stem_horizontal",
+        "x": 90
+      },
+      "when": {
+        "axis": "z",
+        "face": "false"
+      }
+    }
+  ]
+}

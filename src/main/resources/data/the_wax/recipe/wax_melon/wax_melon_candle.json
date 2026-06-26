@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+
+    "#minecraft:candles"
+  ],
+  "result": {
+    "count": 6,
+    "id": "the_wax:wax_melon_candle"
+  }
+}

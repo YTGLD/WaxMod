@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#the_wax:nether_pipe"
+  ],
+  "result": {
+    "count": 4,
+    "id": "the_wax:nether_pipe_planks"
+  }
+}

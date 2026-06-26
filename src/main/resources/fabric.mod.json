@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "the_wax",
+	"version": "${version}",
+	"name": "The Wax",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Ytgld"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/the-wax-gourd",
+		"sources": "https://github.com/YTGLD/WaxMod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/the_wax/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ytgld.the_wax.WaxMod"
+		],
+		"client": [
+			"com.ytgld.the_wax.WaxModClient"
+		],
+		"fabric-datagen": [
+			"com.ytgld.the_wax.WaxDataGenerator"
+		]
+	},
+	"mixins": [
+		"the_wax.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

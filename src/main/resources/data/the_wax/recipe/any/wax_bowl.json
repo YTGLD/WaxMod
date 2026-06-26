@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "the_wax:wax"
+  },
+  "pattern": [
+    "   ",
+    "A A",
+    " A "
+  ],
+  "result": {
+    "count": 2,
+    "id": "the_wax:wax_bowl"
+  }
+}

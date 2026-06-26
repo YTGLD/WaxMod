@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "the_wax:block/melon_vine"
+    },
+    "berries=true": {
+      "model": "the_wax:block/melon_vine_lit"
+    }
+  }
+}

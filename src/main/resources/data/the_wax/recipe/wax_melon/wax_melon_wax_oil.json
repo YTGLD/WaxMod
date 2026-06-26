@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax",
+    "the_wax:wax_melon_wax"
+  ],
+  "result": {
+    "count": 3,
+    "id": "the_wax:wax_melon_wax_oil"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "the_wax:block/wax_melon_candle_top",
+    "side": "the_wax:block/wax_melon_candle_long",
+    "top": "the_wax:block/wax_melon_candle_top"
+  }
+}
