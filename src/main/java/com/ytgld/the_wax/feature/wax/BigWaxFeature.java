@@ -1,9 +1,9 @@
 package com.ytgld.the_wax.feature.wax;
 
 import com.mojang.serialization.Codec;
-import com.ytgld.the_wax.block.WaxGourd;
-import com.ytgld.the_wax.block.WaxVinePipe;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.wax.WaxGourd;
+import com.ytgld.the_wax.block.wax.WaxVinePipe;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;

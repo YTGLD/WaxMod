@@ -1,7 +1,7 @@
 package com.ytgld.the_wax;
 
-import com.ytgld.the_wax.block.init.BlockInit;
-import com.ytgld.the_wax.block.init.WaxBlockEntityType;
+import com.ytgld.the_wax.block.BlockInit;
+import com.ytgld.the_wax.block.WaxBlockEntityType;
 import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheFeatures;
@@ -12,7 +12,6 @@ import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.loot.v3.LootTableSource;
 import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.fabricmc.fabric.impl.content.registry.StrippableBlockRegistryImpl;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

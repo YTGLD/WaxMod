@@ -1,7 +1,7 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.wax;
 
 import com.mojang.serialization.MapCodec;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

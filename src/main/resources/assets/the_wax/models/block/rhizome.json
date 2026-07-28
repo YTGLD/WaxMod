@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "the_wax:block/rhizome_bloc_topk",
+    "side": "the_wax:block/rhizome_block"
+  }
+}

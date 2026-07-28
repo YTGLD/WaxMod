@@ -1,7 +1,7 @@
 package com.ytgld.the_wax.feature.wax_melon;
 
 import com.mojang.serialization.Codec;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import com.ytgld.the_wax.block.wax_melon.WaxMelonStem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

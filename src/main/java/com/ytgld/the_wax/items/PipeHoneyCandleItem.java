@@ -1,6 +1,6 @@
 package com.ytgld.the_wax.items;
 
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;

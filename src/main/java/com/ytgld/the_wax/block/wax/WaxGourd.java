@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.wax;
 
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.init.BlockBase;

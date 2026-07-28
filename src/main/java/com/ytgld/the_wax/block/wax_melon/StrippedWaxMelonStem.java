@@ -15,4 +15,5 @@ public class StrippedWaxMelonStem extends RotatedPillarBlock {
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
         return List.of(new ItemStack(this.asItem()));
     }
+
 }

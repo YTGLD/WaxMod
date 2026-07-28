@@ -1,12 +1,11 @@
 package com.ytgld.the_wax.block.wax_melon.candle;
 
 import com.ytgld.the_wax.block.init.BlockBase;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.BlockUtil;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;

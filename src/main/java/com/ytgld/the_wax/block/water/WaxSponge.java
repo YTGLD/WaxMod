@@ -1,6 +1,6 @@
 package com.ytgld.the_wax.block.water;
 
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

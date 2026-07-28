@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block.init;
+package com.ytgld.the_wax.block;
 
 import com.ytgld.the_wax.WaxMod;
 import com.ytgld.the_wax.block.earth.GiantRhizomeBlockEntity;

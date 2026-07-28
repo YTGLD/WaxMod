@@ -1,7 +1,7 @@
 package com.ytgld.the_wax.block.earth;
 
 import com.ytgld.the_wax.block.init.BlockBase;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;

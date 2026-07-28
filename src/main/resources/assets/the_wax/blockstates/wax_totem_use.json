@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "polymer=false,huge=false": {
+      "model": "the_wax:block/wax_totem_use"
+    },
+    "polymer=true,huge=false": {
+      "model": "the_wax:block/wax_totem_use_has"
+    },
+
+    "polymer=false,huge=true": {
+      "model": "the_wax:block/wax_totem_use_huge"
+    },
+    "polymer=true,huge=true": {
+      "model": "the_wax:block/wax_totem_use_huge_has"
+    }
+  }
+}

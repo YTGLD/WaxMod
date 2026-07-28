@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.wax;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;

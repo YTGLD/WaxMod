@@ -3,10 +3,9 @@ package com.ytgld.the_wax.feature.earth;
 import com.mojang.serialization.Codec;
 import com.ytgld.the_wax.block.earth.MelonRootBlockEntity;
 import com.ytgld.the_wax.block.earth.MelonVinePlant;
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import com.ytgld.the_wax.loot.WaxLootTables;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 
 public class UngroudRootFeature extends Feature<UngroudRootFeatureConfig> {
 

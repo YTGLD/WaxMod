@@ -1,6 +1,6 @@
 package com.ytgld.the_wax.block.earth;
 
-import com.ytgld.the_wax.block.init.WaxBlockEntityType;
+import com.ytgld.the_wax.block.WaxBlockEntityType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;

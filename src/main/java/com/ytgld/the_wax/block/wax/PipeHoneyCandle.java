@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.block;
+package com.ytgld.the_wax.block.wax;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
@@ -22,21 +22,38 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.function.ToIntFunction;
 
-public class WaxPipeCandle extends CandleBlock {
+public class PipeHoneyCandle extends CandleBlock {
+    public static final ToIntFunction<BlockState> LIGHT_EMISSION = blockState -> {
+        if (blockState.getValue(LIT)) {
+            if (blockState.getValue(CANDLES) == 1) {
+                return 4;
+            } else if (blockState.getValue(CANDLES) == 2) {
+                return 8;
+            } else if (blockState.getValue(CANDLES) == 3) {
+                return 12;
+            } else if (blockState.getValue(CANDLES) == 4) {
+                return 15;
+            }
+        }
+        return 0;
+
+    };
     private static final Int2ObjectMap<List<Vec3>> maPart = Util.make(
             new Int2ObjectOpenHashMap<>(4),
             int2ObjectOpenHashMap -> {
                 float f = 0.0625f;
-                int2ObjectOpenHashMap.put(1, List.of(new Vec3(8 ,8, 8).scale(f)));
-                int2ObjectOpenHashMap.put(2, List.of(new Vec3(8 ,10, 8).scale(f)));
-                int2ObjectOpenHashMap.put(3, List.of(new Vec3(8 ,12 , 8).scale(f)));
-                int2ObjectOpenHashMap.put(4, List.of(new Vec3(8 ,16, 8).scale(f)));
+                int2ObjectOpenHashMap.put(1, List.of(new Vec3(8 ,7, 8).scale(f)));
+                int2ObjectOpenHashMap.put(2, List.of(new Vec3(8 ,9, 8).scale(f)));
+                int2ObjectOpenHashMap.put(3, List.of(new Vec3(8 ,10 , 8).scale(f)));
+                int2ObjectOpenHashMap.put(4, List.of(new Vec3(8 ,14, 8).scale(f)));
 
             }
     );
-    public WaxPipeCandle(Properties properties) {
+    public PipeHoneyCandle(Properties properties) {
         super(properties);
+        
         
     }
     @Override
@@ -53,11 +70,10 @@ public class WaxPipeCandle extends CandleBlock {
             int lvl = 0;
             if (blockState.getValue(CANDLES) == 4) {
                 lvl=1;
-            }
-            List<Player> list = serverLevel.getEntitiesOfClass(Player.class, new AABB(playerPos.x - range, playerPos.y - range, playerPos.z - range, playerPos.x + range, playerPos.y + range, playerPos.z + range));
+            }  List<Player> list = serverLevel.getEntitiesOfClass(Player.class, new AABB(playerPos.x - range, playerPos.y - range, playerPos.z - range, playerPos.x + range, playerPos.y + range, playerPos.z + range));
             for (Player player : list) {
-                player.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 200 * blockState.getValue(CANDLES), lvl, true, true));
-                player.addEffect(new MobEffectInstance(MobEffects.SPEED, 200 * blockState.getValue(CANDLES), lvl, true, true));
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600 * blockState.getValue(CANDLES), lvl, true, true));
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 600 * blockState.getValue(CANDLES), lvl, true, true));
             }
         }
     }
@@ -89,3 +105,4 @@ public class WaxPipeCandle extends CandleBlock {
         return Block.column(2, 2, 0.0, 4);
     }
 }
+

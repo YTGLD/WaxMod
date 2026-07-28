@@ -1,12 +1,10 @@
 package com.ytgld.the_wax.loot;
 
-import com.ytgld.the_wax.block.init.BlockInit;
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.block.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableSubProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;

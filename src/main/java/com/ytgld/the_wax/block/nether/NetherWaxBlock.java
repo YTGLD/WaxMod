@@ -1,7 +1,7 @@
 package com.ytgld.the_wax.block.nether;
 
 import com.mojang.serialization.MapCodec;
-import com.ytgld.the_wax.block.WaxGourd;
+import com.ytgld.the_wax.block.wax.WaxGourd;
 import com.ytgld.the_wax.block.init.BlockBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

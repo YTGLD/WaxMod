@@ -1,14 +1,16 @@
-package com.ytgld.the_wax.block.init;
+package com.ytgld.the_wax.block;
 
 import com.ytgld.the_wax.WaxMod;
-import com.ytgld.the_wax.block.*;
 import com.ytgld.the_wax.block.earth.*;
 import com.ytgld.the_wax.block.nether.*;
 import com.ytgld.the_wax.block.water.*;
+import com.ytgld.the_wax.block.wax.*;
 import com.ytgld.the_wax.block.wax_melon.*;
 import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandle;
 import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandleHalf;
 import com.ytgld.the_wax.block.wax_melon.candle.WaxMelonCandleOil;
+import com.ytgld.the_wax.block.wax_melon.totem.WaxTotemBase;
+import com.ytgld.the_wax.block.wax_melon.totem.WaxTotemUse;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -153,6 +155,31 @@ public class BlockInit {
      */
     public static final Block StrippedWaxMelonStem_ = register("stripped_wax_melon_stem", StrippedWaxMelonStem::new,
             BlockBehaviour.Properties.of().strength(3f).sound(SoundType.WOOD));
+
+    /**
+     * 2026-6-26
+     */
+    public static final Block WaxTotemBase_ = register("wax_totem_base", WaxTotemBase::new,
+            BlockBehaviour.Properties.of().lightLevel((state)->10).strength(3f).sound(SoundType.WOOD));
+    public static final Block WaxTotemUse_ = register("wax_totem_use", WaxTotemUse::new,
+            BlockBehaviour.Properties.of()
+                    .randomTicks()
+                    .lightLevel((state)->{
+                        if (state.getValue(WaxTotemUse.polymer)){
+                            if (state.getValue(WaxTotemUse.huge)) {
+                                return 15;
+                            }
+                            return 10;
+                        }
+                        return 0;
+                    })
+                    .strength(3f).sound(SoundType.WOOD));
+
+    /**
+     * 2026-7-28
+     */
+    public static final Block RhizomeBlock_ = register("rhizome", RhizomeBlock::new,
+            BlockBehaviour.Properties.of().strength(1.5f).sound(SoundType.WOOD));
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

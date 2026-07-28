@@ -36,6 +36,9 @@
   "block.the_wax.wax_melon_wax_slab": "Half a brick of melon wax",
   "block.the_wax.wax_melon_wax_oil": "Wax melon oil",
   "block.the_wax.stripped_wax_melon_stem": "Peel the wax melon stem",
+  "block.the_wax.wax_totem_base": "Melon stem totem base",
+  "block.the_wax.wax_totem_use": "Melon stem totem",
+  "block.the_wax.rhizome": "rhizome",
 
 
 
@@ -72,5 +75,8 @@
   "item.the_wax.wax_melon_candle": "Melon wax candles",
   "item.the_wax.wax_melon_wax_slab": "Half a brick of melon wax",
   "item.the_wax.wax_melon_wax_oil": "Wax melon oil",
-  "item.the_wax.stripped_wax_melon_stem": "Peel the wax melon stem"
+  "item.the_wax.stripped_wax_melon_stem": "Peel the wax melon stem",
+  "item.the_wax.wax_totem_base": "Melon stem totem base",
+  "item.the_wax.wax_totem_use": "Melon stem totem",
+  "item.the_wax.rhizome": "rhizome"
 }

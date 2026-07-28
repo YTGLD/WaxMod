@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "the_wax:block/rhizome_block_0"
+      },
+      "when": {
+        "offset": 0
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/rhizome_block_1"
+      },
+      "when": {
+        "offset": 1
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/rhizome_block_2"
+      },
+      "when": {
+        "offset": 2
+      }
+    },
+    {
+      "apply": {
+        "model": "the_wax:block/rhizome_block_3"
+      },
+      "when": {
+        "offset": 3
+      }
+    }
+  ]
+}

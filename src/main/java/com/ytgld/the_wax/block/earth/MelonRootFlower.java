@@ -1,19 +1,14 @@
 package com.ytgld.the_wax.block.earth;
 
 import com.ytgld.the_wax.block.init.BlockBase;
-import com.ytgld.the_wax.block.init.BlockInit;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import java.util.List;
 
 public class MelonRootFlower extends BlockBase {
     private static final VoxelShape SHAPE = Shapes.or(

@@ -1,6 +1,6 @@
 package com.ytgld.the_wax;
 
-import com.ytgld.the_wax.block.init.BlockInit;
+import com.ytgld.the_wax.block.BlockInit;
 import com.ytgld.the_wax.items.init.ItemInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -30,6 +30,7 @@ public class WaxTab {
                 entries.accept(BlockInit.NETHER_PIPE_OTHER);
                 entries.accept(BlockInit.NETHER_PIPE_PLANKS);
                 entries.accept(BlockInit.NETHER_FLOWER);
+                entries.accept(BlockInit.RhizomeBlock_);
 
 
 
@@ -60,6 +61,8 @@ public class WaxTab {
                 entries.accept(BlockInit.WaxMelonCandleHalf_);
                 entries.accept(BlockInit.WaxMelonCandleOil_);
                 entries.accept(BlockInit.StrippedWaxMelonStem_);
+                entries.accept(BlockInit.WaxTotemBase_);
+                entries.accept(BlockInit.WaxTotemUse_);
 
             })
             .build();
