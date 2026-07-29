@@ -1,7 +1,7 @@
 package com.ytgld.the_wax.items.init;
 
 import com.ytgld.the_wax.WaxMod;
-import com.ytgld.the_wax.items.*;
+import com.ytgld.the_wax.items.wax.*;
 import com.ytgld.the_wax.items.wax_melon.WaxMelonWax;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
@@ -66,6 +66,9 @@ public class ItemInit {
     public static final Item WaxMelonWax_ = register("wax_melon_wax", WaxMelonWax::new,
             new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().alwaysEdible()
                             .nutrition(2).saturationModifier( 1).build()));
+    public static final Item RichInFlourRhizomes_ = register("richin_flour_rhizomes", RichInFlourRhizomes::new,
+            new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().alwaysEdible()
+                    .nutrition(2).saturationModifier( 1).build()));
 
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, name));

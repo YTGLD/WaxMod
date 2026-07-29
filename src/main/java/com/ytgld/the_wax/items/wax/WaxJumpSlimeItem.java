@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.items;
+package com.ytgld.the_wax.items.wax;
 
 import com.ytgld.the_wax.block.BlockInit;
 import net.minecraft.ChatFormatting;

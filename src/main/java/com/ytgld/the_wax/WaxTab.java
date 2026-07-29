@@ -33,7 +33,7 @@ public class WaxTab {
                 entries.accept(BlockInit.RhizomeBlock_);
 
 
-
+                entries.accept(ItemInit.RichInFlourRhizomes_);
                 entries.accept(ItemInit.ITEM_WAX);
                 entries.accept(ItemInit.GOLDEN_WAX);
                 entries.accept(ItemInit.WAX_STRIPS);

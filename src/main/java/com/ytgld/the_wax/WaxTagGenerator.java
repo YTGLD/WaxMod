@@ -2,6 +2,7 @@ package com.ytgld.the_wax;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -29,6 +30,9 @@ public class WaxTagGenerator extends FabricTagsProvider.ItemTagsProvider{
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"melon_root"))
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon_stem_plack"))
 
+        ;
+        getOrCreateRawBuilder(ConventionalItemTags.WHEAT_CROPS)
+                .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"richin_flour_rhizomes"))
         ;
         getOrCreateRawBuilder(NETHER_PIPE)
                 .addElement(Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"nether_pipe"))

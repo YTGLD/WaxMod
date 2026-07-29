@@ -1,4 +1,4 @@
-package com.ytgld.the_wax.items;
+package com.ytgld.the_wax.items.wax;
 
 import net.minecraft.world.item.Item;
 
