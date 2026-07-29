@@ -29,7 +29,7 @@ public class UngroudRootFeature extends Feature<UngroudRootFeatureConfig> {
         WorldGenLevel world = context.level();
         RandomSource random = context.random();
         if (random.nextInt(100) < 33) {
-            BlockPos origin =new BlockPos(context.origin().getX(),Mth.nextInt(RandomSource.create(),-30,20),context.origin().getZ());
+            BlockPos origin =new BlockPos(context.origin().getX(),Mth.nextInt(random,-30,20),context.origin().getZ());
             int vineCount = 1 + random.nextInt(8);
             for (int i = 0; i < vineCount; i++) {
                 int xOffset = random.nextInt(3) - 1; // -1 ~ 1

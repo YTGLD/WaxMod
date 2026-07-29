@@ -18,11 +18,13 @@ public class PlacedProvider extends FabricDynamicRegistryProvider {
     @Override
     protected void configure(HolderLookup.Provider registries, Entries entries) {
         add(registries, entries, ModPlacedFeatures.ROOT);
+        add(registries, entries, ModPlacedFeatures.Rhizome);
     }
     private void add(HolderLookup.Provider registries, Entries entries, ResourceKey<PlacedFeature> resourceKey) {
         Optional<? extends HolderLookup.RegistryLookup<PlacedFeature>> registryLookup =
                 registries.lookup(Registries.PLACED_FEATURE);
-        registryLookup.ifPresent(placedFeatureRegistryLookup -> entries.add(resourceKey, placedFeatureRegistryLookup.getOrThrow(resourceKey).value()));
+        registryLookup.ifPresent(placedFeatureRegistryLookup ->
+                entries.add(resourceKey, placedFeatureRegistryLookup.getOrThrow(resourceKey).value()));
     }
     @Override
     public String getName() {

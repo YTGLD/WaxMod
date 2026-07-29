@@ -8,6 +8,8 @@ import com.ytgld.the_wax.feature.nether.NetherWaxFeatureConfig;
 import com.ytgld.the_wax.feature.water.WaterFeatureConfig;
 import com.ytgld.the_wax.feature.water.WaterWaxFeature;
 import com.ytgld.the_wax.feature.wax.BigWaxFeature;
+import com.ytgld.the_wax.feature.wax.RhizomeRootFeature;
+import com.ytgld.the_wax.feature.wax.RhizomeRootFeatureConfig;
 import com.ytgld.the_wax.feature.wax.WaxFeatureConfig;
 import com.ytgld.the_wax.feature.wax_melon.WaxMelonFeature;
 import com.ytgld.the_wax.feature.wax_melon.WaxMelonFeatureConfig;
@@ -28,6 +30,9 @@ public class TheFeatures {
             register("root", new UngroudRootFeature(UngroudRootFeatureConfig.CODEC));
     public static final Feature<WaxMelonFeatureConfig> WaxMelonFeature_ =
             register("wax_melon", new WaxMelonFeature(WaxMelonFeatureConfig.CODEC));
+
+    public static final Feature<RhizomeRootFeatureConfig> RhizomeRootFeature_ =
+            register("rhizome", new RhizomeRootFeature(RhizomeRootFeatureConfig.CODEC));
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> F register(String name, F feature) {
         return Registry.register(BuiltInRegistries.FEATURE, Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,name), feature);

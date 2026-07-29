@@ -31,6 +31,7 @@ public class WaxTab {
                 entries.accept(BlockInit.NETHER_PIPE_PLANKS);
                 entries.accept(BlockInit.NETHER_FLOWER);
                 entries.accept(BlockInit.RhizomeBlock_);
+                entries.accept(BlockInit.RhizomeVine_);
 
 
                 entries.accept(ItemInit.RichInFlourRhizomes_);

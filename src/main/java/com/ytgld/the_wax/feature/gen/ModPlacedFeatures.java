@@ -19,11 +19,21 @@ public class ModPlacedFeatures {
             ResourceKey.create(Registries.PLACED_FEATURE,
                     Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, "root"));
 
+    public static final ResourceKey<PlacedFeature> Rhizome =
+            ResourceKey.create(Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, "rhizome"));
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         context.register(ROOT,
                 new PlacedFeature(
                         context.lookup(Registries.CONFIGURED_FEATURE)
                                 .getOrThrow(TheConfiguredFeatures.UngroudRootFeatureConfig_),
+                        List.of()
+                ));
+        context.register(Rhizome,
+                new PlacedFeature(
+                        context.lookup(Registries.CONFIGURED_FEATURE)
+                                .getOrThrow(TheConfiguredFeatures.RhizomeRootFeatureConfig_),
                         List.of()
                 ));
     }
@@ -32,5 +42,9 @@ public class ModPlacedFeatures {
                 BiomeSelectors.tag(BiomeTags.HAS_MINESHAFT),
                 GenerationStep.Decoration.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.ROOT);
+        BiomeModifications.addFeature(
+                BiomeSelectors.tag(BiomeTags.HAS_MINESHAFT),
+                GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.Rhizome);
     }
 }
