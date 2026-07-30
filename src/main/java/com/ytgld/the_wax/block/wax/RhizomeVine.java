@@ -2,10 +2,9 @@ package com.ytgld.the_wax.block.wax;
 
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.BlockInit;
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.items.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -91,11 +90,6 @@ public class RhizomeVine extends PipeBlock {
 
                 ;
     }
-    @Override
-    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
-        return List.of(new ItemStack(ItemInit.RichInFlourRhizomes_,1));
-    }
-
     @Override
     protected BlockState updateShape(
             BlockState blockState,

@@ -1,13 +1,12 @@
 package com.ytgld.the_wax.recipe;
 
 import com.mojang.serialization.MapCodec;
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.items.ItemInit;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

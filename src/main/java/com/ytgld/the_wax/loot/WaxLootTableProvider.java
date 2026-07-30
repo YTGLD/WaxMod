@@ -1,6 +1,7 @@
 package com.ytgld.the_wax.loot;
 
 import com.ytgld.the_wax.block.BlockInit;
+import com.ytgld.the_wax.items.ItemInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableSubProvider;
 import net.minecraft.core.HolderLookup;
@@ -25,23 +26,47 @@ public class WaxLootTableProvider extends SimpleFabricLootTableSubProvider {
     public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> lootTableBiConsumer) {
         lootTableBiConsumer.accept(WaxLootTables.MELON_ROOT, LootTable.lootTable()
                 .withPool(LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(4))
+                        .setRolls(ConstantValue.exactly(8))
                         .add(LootItem.lootTableItem(Items.STICK)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(8))))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(12))))
                         .add(LootItem.lootTableItem(Items.RAW_IRON)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
-                        .add(LootItem.lootTableItem(Items.RAW_COPPER)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(6))))
+                        .add(LootItem.lootTableItem(Items.RAW_COPPER)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(10))))
                         .add(LootItem.lootTableItem(Items.GOLD_NUGGET)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2))))
                         .add(LootItem.lootTableItem(Items.COAL)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3))))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
                         .add(LootItem.lootTableItem(Items.IRON_NUGGET)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(5))))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
+                        .add(LootItem.lootTableItem(Items.STRING)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(8))))
+                        .add(LootItem.lootTableItem(Items.SPIDER_EYE)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3))))
+                        .add(LootItem.lootTableItem(Items.NAME_TAG)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                        .add(LootItem.lootTableItem(Items.DIAMOND)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                        .add(LootItem.lootTableItem(Items.HONEYCOMB)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
+                        .add(LootItem.lootTableItem(Items.LAPIS_LAZULI)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3))))
+                        .add(LootItem.lootTableItem(Items.EMERALD)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2))))
+                        .add(LootItem.lootTableItem(Items.BONE)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(8))))
+                        .add(LootItem.lootTableItem(Items.CHARCOAL)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(8))))
+                        .add(LootItem.lootTableItem(Items.CLAY_BALL)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(6))))
+                        .add(LootItem.lootTableItem(ItemInit.RichInFlourRhizomes_)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
+                        .add(LootItem.lootTableItem(ItemInit.WaxBowl_)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4))))
                         .add(LootItem.lootTableItem(BlockInit.WaxMelonStemSeed_)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2))))
                         .add(LootItem.lootTableItem(BlockInit.RhizomeVine_)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(10))))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(12))))
                 ));
     }
 }

@@ -1,6 +1,7 @@
-package com.ytgld.the_wax.items.init;
+package com.ytgld.the_wax.items;
 
 import com.ytgld.the_wax.WaxMod;
+import com.ytgld.the_wax.block.BlockInit;
 import com.ytgld.the_wax.items.wax.*;
 import com.ytgld.the_wax.items.wax_melon.WaxMelonWax;
 import net.minecraft.core.Registry;
@@ -11,6 +12,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
@@ -69,6 +71,9 @@ public class ItemInit {
     public static final Item RichInFlourRhizomes_ = register("richin_flour_rhizomes", RichInFlourRhizomes::new,
             new Item.Properties().rarity(Rarity.UNCOMMON).food(new FoodProperties.Builder().alwaysEdible()
                     .nutrition(2).saturationModifier( 1).build()));
+
+    public static final Item WaxMelonDoorItem_ = register("wax_melon_door_item", (properties)->new BlockItem(BlockInit.WaxMelonDoor_,properties),
+            new Item.Properties().rarity(Rarity.UNCOMMON));
 
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(WaxMod.MOD_ID, name));

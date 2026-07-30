@@ -186,7 +186,12 @@ public class BlockInit {
     public static final Block RhizomeVine_ = register("rhizome_vine", RhizomeVine::new,
             BlockBehaviour.Properties.of().strength(1.25f).sound(SoundType.CHERRY_WOOD));
 
+    /**
+     * 2026-7-30
+     */
 
+    public static final Block WaxMelonDoor_ = register("wax_melon_door", WaxMelonDoor::new,
+            BlockBehaviour.Properties.of().strength(1.5f).sound(SoundType.WOOD));
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings) {
         ResourceKey<Block> blockKey = keyOfBlock(name);

@@ -41,6 +41,8 @@
   "block.the_wax.rhizome": "富粉根茎块",
   "block.the_wax.richin_flour_rhizomes": "富粉根茎",
   "block.the_wax.rhizome_vine": "根茎藤",
+  "block.the_wax.wax_melon_door": "蜡瓜门",
+  "block.the_wax.wax_melon_door_item": "蜡瓜门",
 
 
 
@@ -84,5 +86,7 @@
   "item.the_wax.wax_totem_use": "产糖图腾",
   "item.the_wax.rhizome": "富粉根茎块",
   "item.the_wax.richin_flour_rhizomes": "富粉根茎",
-  "item.the_wax.rhizome_vine": "根茎藤"
+  "item.the_wax.rhizome_vine": "根茎藤",
+  "item.the_wax.wax_melon_door": "蜡瓜门",
+  "item.the_wax.wax_melon_door_item": "蜡瓜门"
 }

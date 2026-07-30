@@ -5,7 +5,7 @@ import com.ytgld.the_wax.block.WaxBlockEntityType;
 import com.ytgld.the_wax.feature.gen.ModPlacedFeatures;
 import com.ytgld.the_wax.feature.gen.TheConfiguredFeatures;
 import com.ytgld.the_wax.feature.gen.TheFeatures;
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.items.ItemInit;
 import com.ytgld.the_wax.recipe.WaxRecipes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;

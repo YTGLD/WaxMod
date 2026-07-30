@@ -8,6 +8,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Util;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -65,16 +66,21 @@ public class PipeHoneyCandle extends CandleBlock {
     @Override
     protected void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         if (blockState.getValue(LIT)) {
-            Vec3 playerPos = new Vec3(blockPos.getX(),blockPos.getY(),blockPos.getZ());
             int range = 4 + blockState.getValue(CANDLES) * 2;
-            int lvl = 0;
-            if (blockState.getValue(CANDLES) == 4) {
-                lvl=1;
-            }  List<Player> list = serverLevel.getEntitiesOfClass(Player.class, new AABB(playerPos.x - range, playerPos.y - range, playerPos.z - range, playerPos.x + range, playerPos.y + range, playerPos.z + range));
-            for (Player player : list) {
+            Vec3 playerPos = new Vec3(blockPos.getX(),blockPos.getY(),blockPos.getZ());
+            Vec3 min = playerPos.subtract(range, range, range);
+            Vec3 max = playerPos.add(range, range, range);
+            AABB box = new AABB(min, max);
+            List<Player> players = serverLevel.getEntitiesOfClass(Player.class, box, LivingEntity::isAlive);
+            players.forEach(player -> {
+                int lvl = 0;
+                if (blockState.getValue(CANDLES) == 4) {
+                    lvl=1;
+                }
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600 * blockState.getValue(CANDLES), lvl, true, true));
                 player.addEffect(new MobEffectInstance(MobEffects.LUCK, 600 * blockState.getValue(CANDLES), lvl, true, true));
-            }
+
+            });
         }
     }
 

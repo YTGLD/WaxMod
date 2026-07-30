@@ -3,7 +3,7 @@ package com.ytgld.the_wax.block.wax;
 import com.mojang.serialization.MapCodec;
 import com.ytgld.the_wax.block.init.BlockBase;
 import com.ytgld.the_wax.block.BlockInit;
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.items.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;

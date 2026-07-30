@@ -1,6 +1,6 @@
 package com.ytgld.the_wax.block.wax;
 
-import com.ytgld.the_wax.items.init.ItemInit;
+import com.ytgld.the_wax.items.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
