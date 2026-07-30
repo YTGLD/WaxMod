@@ -1,32 +1,23 @@
 {
-  "parent": "minecraft:block/block",
-  "textures": {
-    "texture": "the_wax:block/rhizome_vine"
-  },
-  "elements": [
-    {
-      "from": [6, 0, 6],
-      "to": [10, 8, 10],
-      "faces": {
-        "north": {
-          "texture": "#texture"
-        },
-        "south": {
-          "texture": "#texture"
-        },
-        "east": {
-          "texture": "#texture"
-        },
-        "west": {
-          "texture": "#texture"
-        },
-        "up": {
-          "texture": "#texture"
-        },
-        "down": {
-          "texture": "#texture"
-        }
-      }
-    }
-  ]
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"texture": "the_wax:block/rhizome_vine"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 4, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 4]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 4], "texture": "#texture"},
+				"east": {"uv": [1, 0, 9, 4], "texture": "#texture"},
+				"south": {"uv": [0, 0, 8, 4], "texture": "#texture"},
+				"west": {"uv": [0, 0, 8, 4], "texture": "#texture"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#texture"},
+				"down": {"uv": [0, 1, 8, 9], "texture": "#texture"}
+			}
+		}
+	]
 }

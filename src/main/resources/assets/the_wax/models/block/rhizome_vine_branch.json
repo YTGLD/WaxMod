@@ -1,32 +1,23 @@
 {
-  "parent": "minecraft:block/block",
-  "textures": {
-    "particle": "the_wax:block/rhizome_vine"
-  },
-  "elements": [
-    {
-      "from": [6,6,0],
-      "to": [10,10,8],
-      "faces": {
-        "north": {
-          "texture": "#particle"
-        },
-        "south": {
-          "texture": "#particle"
-        },
-        "east": {
-          "texture": "#particle"
-        },
-        "west": {
-          "texture": "#particle"
-        },
-        "up": {
-          "texture": "#particle"
-        },
-        "down": {
-          "texture": "#particle"
-        }
-      }
-    }
-  ]
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "the_wax:block/rhizome_vine"
+	},
+	"elements": [
+		{
+			"from": [4, 4, 0],
+			"to": [12, 12, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 4, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 8], "texture": "#particle"},
+				"east": {"uv": [0, 0, 4, 8], "texture": "#particle"},
+				"south": {"uv": [0, 0, 8, 8], "texture": "#particle"},
+				"west": {"uv": [0, 0, 4, 8], "texture": "#particle"},
+				"up": {"uv": [0, 0, 8, 4], "texture": "#particle"},
+				"down": {"uv": [0, 0, 8, 4], "texture": "#particle"}
+			}
+		}
+	]
 }

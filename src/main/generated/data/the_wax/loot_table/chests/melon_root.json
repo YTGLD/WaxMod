@@ -72,9 +72,19 @@
             }
           ],
           "name": "the_wax:wax_melon_ste_seed"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "count": 10.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "the_wax:rhizome_vine"
         }
       ],
-      "rolls": 2.0
+      "rolls": 4.0
     }
   ]
 }

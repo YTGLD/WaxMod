@@ -25,7 +25,7 @@ public class WaxLootTableProvider extends SimpleFabricLootTableSubProvider {
     public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> lootTableBiConsumer) {
         lootTableBiConsumer.accept(WaxLootTables.MELON_ROOT, LootTable.lootTable()
                 .withPool(LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(2))
+                        .setRolls(ConstantValue.exactly(4))
                         .add(LootItem.lootTableItem(Items.STICK)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(8))))
                         .add(LootItem.lootTableItem(Items.RAW_IRON)
@@ -40,6 +40,8 @@ public class WaxLootTableProvider extends SimpleFabricLootTableSubProvider {
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(5))))
                         .add(LootItem.lootTableItem(BlockInit.WaxMelonStemSeed_)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2))))
+                        .add(LootItem.lootTableItem(BlockInit.RhizomeVine_)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(10))))
                 ));
     }
 }

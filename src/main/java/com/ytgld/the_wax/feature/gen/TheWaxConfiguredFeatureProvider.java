@@ -25,7 +25,6 @@ public class TheWaxConfiguredFeatureProvider  extends FabricDynamicRegistryProvi
         add(registries, entries, TheConfiguredFeatures.HUGE_NETHER_WAX);
         add(registries, entries, TheConfiguredFeatures.UngroudRootFeatureConfig_);
         add(registries, entries, TheConfiguredFeatures.WaxMelonFeatureConfig_);
-        add(registries, entries, TheConfiguredFeatures.RhizomeRootFeatureConfig_);
     }
     private void add(HolderLookup.Provider registries, Entries entries, ResourceKey<ConfiguredFeature<?, ?>> resourceKey) {
         Optional<? extends HolderLookup.RegistryLookup<ConfiguredFeature<?, ?>>> configuredFeatureRegistryLookup =

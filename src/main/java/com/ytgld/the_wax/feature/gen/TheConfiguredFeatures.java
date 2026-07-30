@@ -26,10 +26,6 @@ public class TheConfiguredFeatures {
             Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"root"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> WaxMelonFeatureConfig_ = ResourceKey.create(Registries.CONFIGURED_FEATURE,
             Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon"));
-
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RhizomeRootFeatureConfig_ = ResourceKey.create(Registries.CONFIGURED_FEATURE,
-            Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"rhizome"));
-
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> featureRegisterable) {
         FeatureUtils.register(featureRegisterable, BIG_WAX, TheFeatures.WAX_FEATURE_CONFIG_FEATURE,
                 new WaxFeatureConfig(10,Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax")
@@ -45,10 +41,6 @@ public class TheConfiguredFeatures {
                 ));
         FeatureUtils.register(featureRegisterable, WaxMelonFeatureConfig_, TheFeatures.WaxMelonFeature_,
                 new WaxMelonFeatureConfig(10,Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"wax_melon")
-                ));
-
-        FeatureUtils.register(featureRegisterable, RhizomeRootFeatureConfig_, TheFeatures.RhizomeRootFeature_,
-                new RhizomeRootFeatureConfig(10,Identifier.fromNamespaceAndPath(WaxMod.MOD_ID,"rhizome")
                 ));
     }
 

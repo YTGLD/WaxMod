@@ -6,6 +6,7 @@ import com.ytgld.the_wax.block.earth.MelonVinePlant;
 import com.ytgld.the_wax.block.BlockInit;
 import com.ytgld.the_wax.loot.WaxLootTables;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -13,85 +14,245 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-
 public class UngroudRootFeature extends Feature<UngroudRootFeatureConfig> {
+
 
     public UngroudRootFeature(Codec<UngroudRootFeatureConfig> codec) {
         super(codec);
     }
 
+
     @Override
     public boolean place(FeaturePlaceContext<UngroudRootFeatureConfig> context) {
-        adVine(context);
+
+        addVine(context);
+
         return true;
     }
-    private void adVine(FeaturePlaceContext<UngroudRootFeatureConfig> context){
+
+
+    private void addVine(
+            FeaturePlaceContext<UngroudRootFeatureConfig> context
+    ) {
+
         WorldGenLevel world = context.level();
         RandomSource random = context.random();
-        if (random.nextInt(100) < 33) {
-            BlockPos origin =new BlockPos(context.origin().getX(),Mth.nextInt(random,-30,20),context.origin().getZ());
-            int vineCount = 1 + random.nextInt(8);
-            for (int i = 0; i < vineCount; i++) {
-                int xOffset = random.nextInt(3) - 1; // -1 ~ 1
-                int zOffset = random.nextInt(3) - 1; // -1 ~ 1
 
-                BlockPos roofPos = origin.offset(xOffset, 0, zOffset);
-                while (world.isEmptyBlock(roofPos) && roofPos.getY() < 320) {
-                    roofPos = roofPos.above();
+
+        // 10%
+        if (random.nextInt(100) >= 10)
+            return;
+
+
+        BlockPos origin = new BlockPos(
+                context.origin().getX(),
+                Mth.nextInt(random, -30, 20),
+                context.origin().getZ()
+        );
+
+
+        // 原8根，降低
+        int vineCount =
+                1 + random.nextInt(4);
+
+
+        BlockState plant =
+                BlockInit.MelonVinePlant_
+                        .defaultBlockState();
+
+
+        for (int i = 0; i < vineCount; i++) {
+
+
+            BlockPos.MutableBlockPos roof =
+                    origin.offset(
+                            random.nextInt(3) - 1,
+                            0,
+                            random.nextInt(3) - 1
+                    ).mutable();
+
+
+            // 限制寻找顶部
+            int searchUp = 80;
+
+
+            while (
+                    world.isEmptyBlock(roof)
+                            && searchUp-- > 0
+            ) {
+                roof.move(Direction.UP);
+            }
+
+
+            if (searchUp <= 0)
+                continue;
+
+
+            BlockPos.MutableBlockPos vine =
+                    roof.below().mutable();
+
+
+            int length =
+                    3 + random.nextInt(5);
+
+
+            for (int j = 0; j < length; j++) {
+
+
+                if (!world.isEmptyBlock(vine))
+                    break;
+
+
+                BlockState state = plant;
+
+
+                if (random.nextInt(4) == 0) {
+                    state =
+                            state.setValue(
+                                    MelonVinePlant.BERRIES,
+                                    true
+                            );
                 }
 
-                BlockPos vinePos = roofPos.below();
-                int vineLength = 3 + random.nextInt(5);
-                for (int j = 0; j < vineLength; j++) {
-                    if (world.isEmptyBlock(vinePos)) {
-                        BlockState state = BlockInit.MelonVinePlant_.defaultBlockState();
-                        if (Mth.nextInt(random, 1, 4) <= 1) {
-                            state = state.setValue(MelonVinePlant.BERRIES,true);
-                        }
-                        world.setBlock(vinePos, state, 2);
+
+                world.setBlock(
+                        vine,
+                        state,
+                        0
+                );
 
 
-                        vinePos = vinePos.below();
-                    } else {
-                        break;
-                    }
+                vine.move(Direction.DOWN);
+            }
+
+
+            // 尾端
+            if (world.isEmptyBlock(vine)) {
+
+
+                BlockState end =
+                        BlockInit.MelonVine_
+                                .defaultBlockState();
+
+
+                if (random.nextInt(4) == 0) {
+                    end = end.setValue(
+                            MelonVinePlant.BERRIES,
+                            true
+                    );
                 }
 
-                if (world.isEmptyBlock(vinePos)) {
-                    BlockState state = BlockInit.MelonVine_.defaultBlockState();
-                    if (Mth.nextInt(random, 1, 4) <= 1) {
-                        state = state.setValue(MelonVinePlant.BERRIES,true);
-                    }
-                    world.setBlock(vinePos, state, 2);
+
+                world.setBlock(
+                        vine,
+                        end,
+                        0
+                );
+
+            }
+
+
+            vine.move(Direction.DOWN);
+
+
+            // 根
+            if (world.isEmptyBlock(vine)) {
+
+
+                world.setBlock(
+                        vine,
+                        BlockInit.MelonRoot_
+                                .defaultBlockState(),
+                        0
+                );
+
+
+                if (random.nextInt(100) < 50) {
+
+                    generateRootFlower(
+                            world,
+                            vine,
+                            random
+                    );
+
                 }
-                BlockPos pos = vinePos.below();
-                if (world.isEmptyBlock(pos)) {
-                    world.setBlock(pos, BlockInit.MelonRoot_.defaultBlockState(), 2);
-                    if (random.nextInt(100) < 50) {
-                        BlockPos stonePos = pos.below();
-                        while (world.isEmptyBlock(stonePos) && stonePos.getY() > -60) {
-                            stonePos = stonePos.below();
-                        }
-                        stonePos = stonePos.above();
 
-                        if (world.isEmptyBlock(stonePos)) {
-                            world.setBlock(stonePos, BlockInit.MelonRoot_.defaultBlockState(), 2);
+            }
+        }
+    }
+    private void generateRootFlower(
+            WorldGenLevel world,
+            BlockPos.MutableBlockPos pos,
+            RandomSource random
+    ){
 
-                            BlockEntity tileEntity = world.getBlockEntity(stonePos);
-                            if (tileEntity instanceof MelonRootBlockEntity melonTile) {
-                                melonTile.setLootTable(WaxLootTables.MELON_ROOT, random.nextLong());
-                            }
-                        }
 
-                        BlockPos sandPos = stonePos.above();
-                        if (world.isEmptyBlock(sandPos)) {
+        BlockPos.MutableBlockPos search =
+                pos.immutable().below()
+                        .mutable();
 
-                            world.setBlock(sandPos, BlockInit.MelonRootFlower_.defaultBlockState(), 2);
-                        }
-                    }
-                }
+
+
+        int depth=40;
+
+
+        while(
+                world.isEmptyBlock(search)
+                        && depth-- >0
+        ){
+            search.move(Direction.DOWN);
+        }
+
+
+        if(depth<=0)
+            return;
+
+
+
+        search.move(Direction.UP);
+
+
+
+        if(world.isEmptyBlock(search)){
+
+
+            world.setBlock(
+                    search,
+                    BlockInit.MelonRoot_
+                            .defaultBlockState(),
+                    0
+            );
+
+
+
+            BlockEntity entity =
+                    world.getBlockEntity(search);
+
+
+            if(entity instanceof MelonRootBlockEntity root){
+
+                root.setLootTable(
+                        WaxLootTables.MELON_ROOT,
+                        random.nextLong()
+                );
+            }
+
+
+
+            BlockPos flower =
+                    search.above();
+
+
+
+            if(world.isEmptyBlock(flower)){
+
+                world.setBlock(
+                        flower,
+                        BlockInit.MelonRootFlower_
+                                .defaultBlockState(),
+                        0
+                );
             }
         }
     }
 }
-

@@ -1,8 +1,63 @@
 {
   "multipart": [
+
     {
       "apply": {
+        "model": "the_wax:block/rhizome_vine_center_grass"
+      },
+      "when": {
+        "grass": true
+      }
+    },
+    {
+      "when": {
+        "grass": false
+      },
+      "apply": {
         "model": "the_wax:block/rhizome_vine_center"
+      }
+    },
+
+    {
+      "when": {
+        "north": true,
+        "mushroom": true
+      },
+      "apply": {
+        "model": "the_wax:block/rhizome_vine_branch_mushroom"
+      }
+    },
+
+    {
+      "when": {
+        "south": true,
+        "mushroom": true
+      },
+      "apply": {
+        "model": "the_wax:block/rhizome_vine_branch_mushroom",
+        "y":180
+      }
+    },
+
+    {
+      "when": {
+        "east": true,
+        "mushroom": true
+      },
+      "apply": {
+        "model": "the_wax:block/rhizome_vine_branch_mushroom",
+        "y":90
+      }
+    },
+
+    {
+      "when": {
+        "west": true,
+        "mushroom": true
+      },
+      "apply": {
+        "model": "the_wax:block/rhizome_vine_branch_mushroom",
+        "y":270
       }
     },
 
@@ -44,7 +99,6 @@
         "y":270
       }
     },
-
     {
       "when":{
         "up":true
